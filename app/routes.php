@@ -20,3 +20,8 @@ Route::get('home', function()
 {
 	return 'Yes';
 });
+
+//Route::get('test', function(){
+//	return 'yes';
+//});
+Route::get('test', 'HomeController@getPost');

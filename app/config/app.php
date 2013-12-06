@@ -113,7 +113,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+		'Wardrobe\Core\WardrobeServiceProvider',
+		
 	),
 
 	/*
@@ -178,7 +179,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
+		'Wardrobe' 		  => 'Wardrobe\Core\Facades\WardrobeFacade',
 	),
 
 );

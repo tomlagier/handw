@@ -19,5 +19,10 @@ class HomeController extends BaseController {
 	{
 		return View::make('hello');
 	}
+	
+	public function getPost(){
+		$posts = Wardrobe::posts();
+		return $posts;
+	}
 
 }
