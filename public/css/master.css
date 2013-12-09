@@ -1,0 +1,40 @@
+body{
+	height: 7000px;
+	width: 100%;
+}
+
+.page{
+	height: 1000px;
+	width: calc(100% - 40px);
+	background: gray;
+	margin: 20px;
+	background-size: 100%;
+	position: relative;
+}
+
+.page-contents{
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.loader{
+	width: 100%;
+	height: 100%;
+	background: blue;
+}
+
+.nav-item:hover{
+	cursor: pointer;
+	color: red;
+}
+
+#side-nav{
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	z-index: 10;
+}

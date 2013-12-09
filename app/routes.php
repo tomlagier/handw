@@ -11,17 +11,12 @@
 |
 */
 
-Route::any('/', function()
-{
-	return View::make('hello');
-});
+Route::any('/', 'HomeController@getIndex');
 
-Route::get('home', function()
-{
-	return 'Yes';
-});
+Route::get('/posts', 'HomeController@getPosts');
+
+Route::get('/{page}', 'HomeController@getPage');
 
 //Route::get('test', function(){
 //	return 'yes';
 //});
-Route::get('test', 'HomeController@getPost');

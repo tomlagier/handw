@@ -2,7 +2,7 @@
 
 return array(
 	'blog_group_rules' => array(
-		// 'prefix' => 'blog',
+		'prefix' => 'blogsite',
 		// 'domain' => 'blog.site.com'
 	),
 
