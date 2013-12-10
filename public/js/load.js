@@ -1,4 +1,4 @@
-$(document).on('ready', function(){
+function bindWaypoints(){
 
 	//Sets up lazy loading views. Load occurs when element is 5% of the viewport from the bottom of the window. 
 	//Will fire once, and only if it's the last waypoint during a scroll.
@@ -17,6 +17,13 @@ $(document).on('ready', function(){
 		offset: '-90%'
 	});
 
+}
+
+//Set individual page height to window height, then (re)bind waypoints
+$(window).on('load resize', function(){
+    $('.page').height($(window).height());
+    $('.page').waypoint('destroy');
+    bindWaypoints();
 });
 
 //Loads a given page
@@ -43,9 +50,7 @@ function loadPage(page){
 			//Otherwise fade in content
 			} else {
 				pageObj.parent().find('.loader').fadeOut('fast', function(){
-					//Using visibility hidden to allow for smooth scrolling
-					pageObj.css('visibility', 'visible');
-					pageObj.fadeIn();
+					pageObj.addClass('visible');
 				});	
 			}
 		});

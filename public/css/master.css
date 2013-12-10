@@ -15,10 +15,21 @@ body{
 .page-contents{
 	width: 100%;
 	height: 100%;
-	visibility: hidden;
+	opacity: 0;
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+
+.fadein{
+	-moz-transition:opacity .8s;
+    -webkit-transition:opacity .8s;
+    -o-transition:opacity .8s;
+    transition:opacity .8s;
+}
+
+.fadein.visible{
+	opacity: 1;
 }
 
 .loader{
@@ -37,4 +48,125 @@ body{
 	bottom: 40px;
 	right: 40px;
 	z-index: 10;
+}
+
+.nav-item.active{
+	color: green;
+}
+
+#main-nav{
+}
+
+#main-nav li{
+	display: inline-block;
+	margin 0 10px;
+}
+
+#header{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	padding: 40px 0 0 40px;
+	background: black;
+	z-index: 10;
+	width: 100%;
+	color: white;
+	height: 118px;
+}
+
+img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.right-content{
+	width: 60%;
+	position: absolute;
+	right: 0;
+	height: calc(100% - 127px);
+	top: 118px;
+}
+
+.left-content{
+	width: 40%;
+	padding: 40px;
+	position: absolute;
+	left: 0;
+	top: 108px;
+}
+
+.carousel-inner{
+	height: 100%;
+}
+
+.carousel-inner .item{
+	max-height: 100%;
+}
+
+#portfolio-carousel .carousel-inner{
+	height: calc(100% - 318px);
+	top: 218px;
+	width: 50%;
+	right: 5%;
+}
+
+#portfolio-carousel{
+	height: 100%;
+}
+
+#portfolio-carousel .carousel-indicators{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	height: calc(100% - 318px);
+	top: 218px;
+	width: 30%;
+	left: 5%;
+}
+
+#portfolio-carousel .carousel-indicators li{
+	width: 49%;
+	height: 50%;
+	z-index: 999;
+	position: relative;
+	text-indent: 0;
+	display: inline-block;
+}
+
+#portfolio-carousel .carousel-control{
+	width: 5%;
+}
+
+.services-item{
+	-moz-transition: color .5s;
+    -webkit-transition: color .5s;
+    -o-transition: color .5s;
+    transition: color .5s;
+}
+
+.services-nav-item.active{
+	color: white;
+}
+
+.services-nav-item:hover{
+	cursor: pointer;
+}
+
+.services-item.active{
+	color: white;
+	font-size: 120%;
+}
+
+.column-2{
+	width: 49%;
+	position: absolute;
+	max-width: ;
+}
+
+.column-2:first-child{
+	left: 0;
+}
+
+.column-2:last-child{
+	right: 0;
 }
