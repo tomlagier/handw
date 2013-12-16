@@ -16,18 +16,26 @@ img{
 
 .right-content{
 	width: 60%;
+	padding: 80px 93px 0 0;
+	font-size: 0;
 	position: absolute;
 	right: 0;
-	height: calc(100% - 127px);
-	top: 118px;
+	height: calc(100% - 225px);
+	top: 100px;
 }
 
 .left-content{
-	width: 40%;
-	padding: 40px;
-	position: absolute;
+	font-size: 0;
+	position: relative;
+	padding: 80px 0 0 93px;
 	left: 0;
-	top: 108px;
+	width: 40%;
+	top: 100px;
+	height: calc(100% - 225px);
+}
+
+.right-content > *, .left-content > * {
+	font-size: 12pt;
 }
 
 *{
@@ -73,16 +81,16 @@ img{
 
 
 .column-2{
-	width: 50%;
-	position: absolute;
+	-webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    column-count:2;
+    column-gap:20px;
 }
 
-.column-2:first-child{
-	left: 0;
-}
-
-.column-2:last-child{
-	right: 0;
+.column-2 p:first-child, .column-2 ol, .column-2 li:first-child{
+	margin-top: 0;
 }
 
 
@@ -140,6 +148,16 @@ img{
 	z-index: 9;
 }
 
+/* Home page styles */
+#home-text{
+	font-size: 12pt;
+}
+
+#home-carousel{
+	height: calc(100% - 100px);
+	padding-top: 0;
+}
+
 /* Portfolio page styles */
 
 #portfolio-carousel .carousel-inner{
@@ -147,6 +165,7 @@ img{
 	top: 218px;
 	width: 50%;
 	right: 5%;
+	padding-top: 0;
 }
 
 #portfolio-carousel{
@@ -180,6 +199,11 @@ img{
 /* Services Page styles */
 
 .services-item{
+	margin-bottom: 10px;
+}
+
+.services-nav-item{
+	text-transform: uppercase;
 }
 
 .services-nav-item.active{
@@ -192,18 +216,19 @@ img{
 
 .services-item.active{
 	color: white;
-	font-size: 120%;
+	font-size: 110%;
+}
+
+.services-list{
+	list-style: number;
 }
 
 /* Team Page styles */
 
-#team-image-wrapper{
-	font-size: 0;
-	position: relative;
-	padding: 90px 0 0 0;
-	left: 3.5%; 
-	width: 37%;
+#team-bios-wrapper{
+	padding-left: 50px;
 }
+
 
 .team-image{
 	width: 50%;
@@ -211,26 +236,20 @@ img{
 }
 
 
-#team-bios-wrapper{
-	width: 56%;
-	padding: 80px 93px 0 0;
-	font-size: 0; 
-}
-
 .team-bio{
-	width: 50%;
+	width: 44%;
 	font-size: 12pt;
 	display: inline-block;
-	padding: 30px;
 	height: 349px;
 	overflow: hidden;
+	margin-right: 6%;
 }
 
 .team-green-line{
-	width: 94%;
+	width: 100%;
 	height: 3px;
 	background-color: green;
-	margin: 10px 0;
+	margin: 10px 0 40px 0;
 }
 
 .team-thumb{
@@ -239,4 +258,40 @@ img{
 
 .team-bio .lower-content{
 	clear: both;
+}
+
+/* Blog Page styles */
+
+#blog-nav-menu{
+	margin: 0;
+	list-style-type: none;
+}
+
+.blog-nav-item.active{
+	color: white;
+}
+
+.blog-nav-item:hover{
+	cursor: pointer;
+}
+
+#blog-posts{
+}
+
+.blog-post.active{
+	display:block;
+}
+
+.blog-post{
+	display: none;
+}
+
+/* Contact page styles */
+
+.contact-block{
+	margin: 10px 0;
+}
+
+#contact-map{
+	padding-right: 110px;
 }
