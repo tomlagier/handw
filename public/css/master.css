@@ -1,6 +1,10 @@
 body{
 	height: 7000px;
 	width: 100%;
+	-moz-transition:top .5s;
+    -webkit-transition:top .5s;
+    -o-transition:top .5s;
+    transition:top .5s;
 }
 
 .page{

@@ -5,6 +5,7 @@ Footer content goes here
 <!-- Begin footer scripts -->
 <script src="js/bootstrap.js"></script>
 <script src="js/waypoints.js"></script>
+<script src="js/scrollIntoView.js"></script>
 <script src="js/main.js"></script>
 <script src="js/load.js"></script>
 <script src="js/navigation.js"></script>

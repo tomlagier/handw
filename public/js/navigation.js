@@ -36,8 +36,9 @@ $(document).ready(function(){
 //Snaps the screen to a page after scroll input has stopped arriving.
 var snap = _.debounce(function(event){
 
-    if(window.preventSnap){
+    if(window.preventScroll){
         event.preventDefault();
+        return false;
     }
 
     //Check each page view            
@@ -46,50 +47,53 @@ var snap = _.debounce(function(event){
         //If the page view is 70% of the screen and we are allowed to snap, snap into view
         if($(element).isNearScreen(0.3) && !window.preventSnap){
 
-            $('html,body').stop();
-            $('html,body').animate({
+            $('html,body').stop().animate({
                 scrollTop: $(element).offset().top
             }, 200);
 
-
             window.preventSnap = true;
-            $(window).off('scroll.snap');
+            window.preventScroll = true;
+
+             setTimeout(function(){
+                window.preventScroll = false;
+             }, 220);
+
              setTimeout(function(){
                  window.preventSnap = false;
-                 $(window).on('scroll.snap', snap);
-             }, 600);
+             }, 550);
         }
     });  
 }, 500);
 
-    //Modification of http://upshots.org/javascript/jquery-test-if-element-is-in-viewport-visible-on-screen 
-    //Returns "true" if more than 70% of an element is onscreen
-    $.fn.isNearScreen = function(percent){
-         
-        var win = $(window);
-         
-        var viewport = {
-            top : win.scrollTop()
-        };
-
-        viewport.bottom = viewport.top + win.height();
-         
-        var bounds = this.offset();
-        bounds.bottom = bounds.top + this.outerHeight();
-        bounds.top = bounds.top;
-
-        //If the element is visible
-        if(!(viewport.bottom < bounds.top || viewport.top > bounds.bottom)){
-        	
-            //Get the percentage of the element that's visible
-            var percentage = (viewport.bottom - bounds.top) / this.height();
-        	return (percentage > (1 - percent) && percentage < (1 + percent));
-        }
-        return false;
-         
-    };
-
 window.preventSnap = false;
+window.preventScroll = false;
 
 //Enable snap to page
 $(window).on('scroll.snap', snap);
+
+//Modification of http://upshots.org/javascript/jquery-test-if-element-is-in-viewport-visible-on-screen 
+//Returns "true" if more than 70% of an element is onscreen
+$.fn.isNearScreen = function(percent){
+     
+    var win = $(window);
+     
+    var viewport = {
+        top : win.scrollTop()
+    };
+
+    viewport.bottom = viewport.top + win.height();
+     
+    var bounds = this.offset();
+    bounds.bottom = bounds.top + this.outerHeight();
+    bounds.top = bounds.top;
+
+    //If the element is visible
+    if(!(viewport.bottom < bounds.top || viewport.top > bounds.bottom)){
+        
+        //Get the percentage of the element that's visible
+        var percentage = (viewport.bottom - bounds.top) / this.height();
+        return (percentage > (1 - percent) && percentage < (1 + percent));
+    }
+    return false;
+     
+};
