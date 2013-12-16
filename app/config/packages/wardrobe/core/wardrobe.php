@@ -63,7 +63,7 @@ return array(
 	| Set this to the number of posts you want per page.
 	|
 	*/
-	'per_page' => 5,
+	'per_page' => 100,
 
 	/*
 	|--------------------------------------------------------------------------

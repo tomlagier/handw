@@ -14,7 +14,7 @@ class HomeController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
-	
+
 	
 	/**
 	*	Returns the specified page view

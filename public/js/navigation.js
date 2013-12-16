@@ -45,7 +45,7 @@ var snap = _.debounce(function(event){
     $.each($('.page-contents'), function(index, element){
         
         //If the page view is 70% of the screen and we are allowed to snap, snap into view
-        if($(element).isNearScreen(0.3) && !window.preventSnap){
+        if($(element).isNearScreen(0.25) && !window.preventSnap){
 
             $('html,body').stop().animate({
                 scrollTop: $(element).offset().top

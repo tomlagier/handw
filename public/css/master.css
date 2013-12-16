@@ -1,3 +1,5 @@
+/* General styles */
+
 body{
 	height: 7000px;
 	width: 100%;
@@ -6,6 +8,33 @@ body{
     -o-transition:top .5s;
     transition:top .5s;
 }
+
+img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.right-content{
+	width: 60%;
+	position: absolute;
+	right: 0;
+	height: calc(100% - 127px);
+	top: 118px;
+}
+
+.left-content{
+	width: 40%;
+	padding: 40px;
+	position: absolute;
+	left: 0;
+	top: 108px;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+/* General Page styles */
 
 .page{
 	height: 1000px;
@@ -42,6 +71,23 @@ body{
 	background: blue;
 }
 
+
+.column-2{
+	width: 50%;
+	position: absolute;
+}
+
+.column-2:first-child{
+	left: 0;
+}
+
+.column-2:last-child{
+	right: 0;
+}
+
+
+/* Navigation styles */
+
 .nav-item:hover{
 	cursor: pointer;
 	color: red;
@@ -66,6 +112,8 @@ body{
 	margin 0 10px;
 }
 
+/* Header styles */
+
 #header{
 	position: fixed;
 	top: 0px;
@@ -78,26 +126,7 @@ body{
 	height: 118px;
 }
 
-img{
-	max-width: 100%;
-	max-height: 100%;
-}
-
-.right-content{
-	width: 60%;
-	position: absolute;
-	right: 0;
-	height: calc(100% - 127px);
-	top: 118px;
-}
-
-.left-content{
-	width: 40%;
-	padding: 40px;
-	position: absolute;
-	left: 0;
-	top: 108px;
-}
+/* Carousel styles */
 
 .carousel-inner{
 	height: 100%;
@@ -106,6 +135,12 @@ img{
 .carousel-inner .item{
 	max-height: 100%;
 }
+
+.carousel-indicators{
+	z-index: 9;
+}
+
+/* Portfolio page styles */
 
 #portfolio-carousel .carousel-inner{
 	height: calc(100% - 318px);
@@ -126,6 +161,7 @@ img{
 	top: 218px;
 	width: 30%;
 	left: 5%;
+	font-size: 0;
 }
 
 #portfolio-carousel .carousel-indicators li{
@@ -141,11 +177,9 @@ img{
 	width: 5%;
 }
 
+/* Services Page styles */
+
 .services-item{
-	-moz-transition: color .5s;
-    -webkit-transition: color .5s;
-    -o-transition: color .5s;
-    transition: color .5s;
 }
 
 .services-nav-item.active{
@@ -161,16 +195,48 @@ img{
 	font-size: 120%;
 }
 
-.column-2{
-	width: 49%;
-	position: absolute;
-	max-width: ;
+/* Team Page styles */
+
+#team-image-wrapper{
+	font-size: 0;
+	position: relative;
+	padding: 90px 0 0 0;
+	left: 3.5%; 
+	width: 37%;
 }
 
-.column-2:first-child{
-	left: 0;
+.team-image{
+	width: 50%;
+	display: inline-block;
 }
 
-.column-2:last-child{
-	right: 0;
+
+#team-bios-wrapper{
+	width: 56%;
+	padding: 80px 93px 0 0;
+	font-size: 0; 
+}
+
+.team-bio{
+	width: 50%;
+	font-size: 12pt;
+	display: inline-block;
+	padding: 30px;
+	height: 349px;
+	overflow: hidden;
+}
+
+.team-green-line{
+	width: 94%;
+	height: 3px;
+	background-color: green;
+	margin: 10px 0;
+}
+
+.team-thumb{
+	float: left;
+}
+
+.team-bio .lower-content{
+	clear: both;
 }
