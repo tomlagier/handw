@@ -1,5 +1,5 @@
 <!-- Begin footer content -->
-Footer content goes here
+<span><a href="/">Hanson & Wen LLC</a> | &copy;2014 | <a href="mailto:hello@hansonandwen.com">hello@hansonandwen.com</a> | <a href="/">Privacy</a> | <a href="/">Terms</a> | <a href="/">Site Map</a> | v2</span>
 <!-- End footer content -->
 
 <!-- Begin footer scripts -->

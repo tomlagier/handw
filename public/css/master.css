@@ -101,6 +101,17 @@ img{
 	color: red;
 }
 
+#main-nav .nav-item{
+	text-transform: uppercase;
+	border-right: 1px solid white;
+	padding: 0 10px;
+	margin: 0;
+}
+
+#main-nav .nav-item:last-child{
+	border-right: none;
+}
+
 #side-nav{
 	position: fixed;
 	bottom: 40px;
@@ -108,11 +119,23 @@ img{
 	z-index: 10;
 }
 
-.nav-item.active{
-	color: green;
+#side-nav ul{
+	font-size: 0;
 }
 
-#main-nav{
+#side-nav .nav-item{
+	height: 10px;
+	width: 10px;
+	background: lightgray;
+	margin: 5px;
+}
+
+#side-nav .nav-item.active{
+	background: green;
+}
+
+.nav-item.active{
+	color: green;
 }
 
 #main-nav li{
@@ -126,12 +149,42 @@ img{
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	padding: 40px 0 0 40px;
+	padding: 10px 0 0 40px;
 	background: black;
 	z-index: 10;
 	width: 100%;
 	color: white;
 	height: 118px;
+}
+
+.before-nav > div{
+	display: inline-block;
+}
+
+.before-nav{
+	height: 60px;
+}
+
+#logo{
+	margin-right: 5%;
+	vertical-align: top;
+	height: 100%;
+}
+
+
+#logo img{
+	width: 100%;
+}
+
+.social-icon{
+	display: inline-block;
+	width: 50px;
+	height: 50px; 
+	background: lightgray;
+}
+
+.social-icon:hover{
+	cursor: pointer;
 }
 
 /* Carousel styles */
@@ -294,4 +347,15 @@ img{
 
 #contact-map{
 	padding-right: 110px;
+}
+
+/* Footer styles */
+
+#footer{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	padding: 20px 90px;
+	background: black;
+	font-size: .9em;
 }
