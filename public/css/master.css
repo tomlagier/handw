@@ -1,4 +1,49 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Gibson';
+    src: url('/fonts/gibson-bold-webfont.eot');
+    src: url('/fonts/gibson-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/gibson-bold-webfont.woff') format('woff'),
+         url('/fonts/gibson-bold-webfont.ttf') format('truetype'),
+         url('/fonts/gibson-bold-webfont.svg#Gibson') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Gibson';
+    src: url('/fonts/gibson-italic-webfont.eot');
+    src: url('/fonts/gibson-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/gibson-italic-webfont.woff') format('woff'),
+         url('/fonts/gibson-italic-webfont.ttf') format('truetype'),
+         url('/fonts/gibson-italic-webfont.svg#Gibson') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Gibson';
+    src: url('/fonts/gibson-regular-webfont.eot');
+    src: url('/fonts/gibson-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/gibson-regular-webfont.woff') format('woff'),
+         url('/fonts/gibson-regular-webfont.ttf') format('truetype'),
+         url('/fonts/gibson-regular-webfont.svg#Gibson') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* General styles */
+
 
 body{
 	height: 7000px;
@@ -7,6 +52,9 @@ body{
     -webkit-transition:top .5s;
     -o-transition:top .5s;
     transition:top .5s;
+	font-family: 'Gibson', sans-serif;
+    background: black;
+    color: white;
 }
 
 img{
@@ -47,7 +95,6 @@ img{
 .page{
 	height: 1000px;
 	width: calc(100% - 40px);
-	background: gray;
 	margin: 20px;
 	background-size: 100%;
 	position: relative;
@@ -69,6 +116,13 @@ img{
     transition:opacity .8s;
 }
 
+.fadein-fast{
+	-moz-transition:opacity .4s;
+    -webkit-transition:opacity .4s;
+    -o-transition:opacity .4s;
+    transition:opacity .4s;
+}
+
 .fadein.visible{
 	opacity: 1;
 }
@@ -76,7 +130,16 @@ img{
 .loader{
 	width: 100%;
 	height: 100%;
-	background: blue;
+	background: black;
+	position: relative;
+}
+
+.loader .spinner{
+	position: absolute;
+	top: 50%;
+	margin-top: -64px;
+	left: 50%;
+	margin-left: -64px;
 }
 
 
@@ -98,18 +161,19 @@ img{
 
 .nav-item:hover{
 	cursor: pointer;
-	color: red;
+	color: white;
 }
 
 #main-nav .nav-item{
 	text-transform: uppercase;
-	border-right: 1px solid white;
+	border-left: 1px solid #999;
 	padding: 0 10px;
 	margin: 0;
+	color: #999;
 }
 
-#main-nav .nav-item:last-child{
-	border-right: none;
+#main-nav .nav-item:first-child{
+	border-left: none;
 }
 
 #side-nav{
@@ -131,16 +195,33 @@ img{
 }
 
 #side-nav .nav-item.active{
-	background: green;
+	background: #669933;
 }
 
-.nav-item.active{
-	color: green;
+#main-nav .nav-item.active{
+	color: white;
+}
+
+#main-nav .nav-item:hover{
+	color: #669933;
 }
 
 #main-nav li{
 	display: inline-block;
 	margin 0 10px;
+}
+
+#portfolio-subnav{
+	padding: 0px;
+	display: none;
+	position: absolute;
+	margin: 0px;
+}
+
+#portfolio-subnav .nav-item{
+	display: block;
+	padding: 0;
+	border: 0;
 }
 
 /* Header styles */
@@ -155,6 +236,7 @@ img{
 	width: 100%;
 	color: white;
 	height: 118px;
+	box-shadow: 0 0 30px black;
 }
 
 .before-nav > div{
@@ -213,7 +295,7 @@ img{
 
 /* Portfolio page styles */
 
-#portfolio-carousel .carousel-inner{
+.portfolio-carousel .carousel-inner{
 	height: calc(100% - 318px);
 	top: 218px;
 	width: 50%;
@@ -221,11 +303,20 @@ img{
 	padding-top: 0;
 }
 
-#portfolio-carousel{
+.portfolio-carousel{
 	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: none;
 }
 
-#portfolio-carousel .carousel-indicators{
+.portfolio-carousel.active{
+	display: block;
+}
+
+.portfolio-carousel .carousel-indicators{
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -236,7 +327,7 @@ img{
 	font-size: 0;
 }
 
-#portfolio-carousel .carousel-indicators li{
+.portfolio-carousel .carousel-indicators li{
 	width: 49%;
 	height: 50%;
 	z-index: 999;
@@ -245,18 +336,54 @@ img{
 	display: inline-block;
 }
 
-#portfolio-carousel .carousel-control{
+.portfolio-carousel .carousel-control{
 	width: 5%;
+}
+
+#portfolio-nav{	
+	position: fixed;
+	top: 84px;
+	right: 36%;
+	z-index: 10;
+	opacity: 0;
+}
+
+#portfolio-nav.faded{
+	opacity: 1;
+}
+
+.portfolio-nav-item{
+	display: inline-block;
+	text-transform: uppercase;
+	border-right: 1px solid white;
+	padding: 0 10px;
+	margin: 0;
+	color: #999;
+}
+
+.portfolio-nav-item:hover{
+	cursor: pointer;
+	color: #669933;
+}
+
+.portfolio-nav-item.active{
+	color: white;
+}
+
+.portfolio-nav-item:last-child{
+	border-right: 0;
 }
 
 /* Services Page styles */
 
 .services-item{
 	margin-bottom: 10px;
+	color: #999;
 }
 
 .services-nav-item{
 	text-transform: uppercase;
+	color: #999;
 }
 
 .services-nav-item.active{
@@ -358,4 +485,5 @@ img{
 	padding: 20px 90px;
 	background: black;
 	font-size: .9em;
+	box-shadow: 0 0 30px black;
 }

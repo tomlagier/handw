@@ -1,6 +1,6 @@
 //Enable smooth scrolling
 $(document).ready(function(){
-	$('.nav-item').on('click touchstart', function(){
+	$('#main-nav > ul > .nav-item, #side-nav > ul > .nav-item').on('click touchstart', function(){
 
 		//Get scroll target
 		var target = $($(this).attr('data-anchor'));
@@ -10,7 +10,26 @@ $(document).ready(function(){
         	scrollTop: target.offset().top
         }, 1000);
 	});
+
+    $('#portfolio-subnav .nav-item').on('click touchstart', function(){
+        var target=$('#portfolio');
+        portfolioPage = $(this).attr('data-portfolio-anchor');
+        var targetNav = $('.portfolio-nav-item[data-href=' + portfolioPage + ']');
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, function(){
+            targetNav.click();
+        });
+    });
+
+    $('#main-nav .nav-item[data-anchor=#portfolio]').hover(function(){
+        $('#portfolio-subnav').fadeIn();
+    }, function(){
+        $('#portfolio-subnav').fadeOut();
+    });
 });
+
+var portfolioPage = '';
 
 //Enable scroll spying
 $(document).ready(function(){
