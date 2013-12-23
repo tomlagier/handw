@@ -44,39 +44,9 @@
 
 /* Font scaling */
 
-/*.fontreset{
-	font-size: 12pt;
+.scale-target{
+	display: inline-block;
 }
-
-@media screen and (max-width : 1600px){
-	.scaletext, .left-content > .scaletext, .right-content > .scaletext{
-		font-size: 12pt;
-	}
-}
-
-@media screen and (max-width: 1400px){
-	.scaletext, .left-content > .scaletext, .right-content > .scaletext{
-		font-size: 11pt;
-	}
-}
-
-@media screen and (max-width: 1200px){
-	.scaletext, .left-content > .scaletext, .right-content > .scaletext{
-		font-size: 10pt;
-	}
-}
-
-@media screen and (max-width: 1000px){
-	.scaletext, .left-content > .scaletext, .right-content > .scaletext{
-		font-size: 9pt;
-	}
-}
-
-@media screen and (max-width: 800px){
-	.scaletext, .left-content > .scaletext, .right-content > .scaletext{
-		font-size: 8pt;
-	}
-}*/
 
 /* General styles */
 

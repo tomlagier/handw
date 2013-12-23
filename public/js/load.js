@@ -96,8 +96,8 @@ function scaleText(elem) {
 function scaleList(elem){
 	var items = $(elem).find('.scale-list-item');
 
-	var target = $(elem).find('.scale-list-item:last-child');
-	var targetRightCoord = target.offset().left + target.width();
+	var target = $(elem).find('.scale-target');
+	var targetRightCoord = target.offset().left
 	var parent = $(elem).parent();
 	var parentRightCoord = parent.offset().left + parent.width();
 	var fontstep = 2;
