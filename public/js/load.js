@@ -49,6 +49,13 @@ function loadPage(page){
 
 			//Otherwise fade in content
 			} else {
+				$.each($('.scale-text'), function(index, element){
+					scaleText(element);
+				});
+
+				$.each($('.scale-list'), function(index, element){
+					scaleList(element);
+				});
 				pageObj.parent().find('.loader').fadeOut('fast', function(){
 					pageObj.addClass('visible');
 				});	
@@ -78,3 +85,25 @@ $.fn.isOnScreen = function(){
      
 };
 
+function scaleText(elem) {
+      var fontstep = 2;
+      if ($(elem).height()>$(elem).parent().height() || $(elem).width()>$(elem).parent().width()) {
+        $(elem).css('font-size',(($(elem).css('font-size').substr(0,2)-fontstep)) + 'px').css('line-height',(($(elem).css('font-size').substr(0,2))) + 'px');
+        scaleText(elem);
+      }
+    }
+
+function scaleList(elem){
+	var items = $(elem).find('.scale-list-item');
+
+	var target = $(elem).find('.scale-list-item:last-child');
+	var targetRightCoord = target.offset().left + target.width();
+	var parent = $(elem).parent();
+	var parentRightCoord = parent.offset().left + parent.width();
+	var fontstep = 2;
+	console.log(targetRightCoord, parentRightCoord);
+	if( targetRightCoord > parentRightCoord){
+		items.css('font-size',(target.css('font-size').substr(0,2)-fontstep) + 'px').css('line-height',((target.css('font-size').substr(0,2))) + 'px');
+        scaleList(elem);
+	}
+}

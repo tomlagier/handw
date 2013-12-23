@@ -42,6 +42,42 @@
 
 }
 
+/* Font scaling */
+
+/*.fontreset{
+	font-size: 12pt;
+}
+
+@media screen and (max-width : 1600px){
+	.scaletext, .left-content > .scaletext, .right-content > .scaletext{
+		font-size: 12pt;
+	}
+}
+
+@media screen and (max-width: 1400px){
+	.scaletext, .left-content > .scaletext, .right-content > .scaletext{
+		font-size: 11pt;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	.scaletext, .left-content > .scaletext, .right-content > .scaletext{
+		font-size: 10pt;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.scaletext, .left-content > .scaletext, .right-content > .scaletext{
+		font-size: 9pt;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.scaletext, .left-content > .scaletext, .right-content > .scaletext{
+		font-size: 8pt;
+	}
+}*/
+
 /* General styles */
 
 
@@ -55,6 +91,8 @@ body{
 	font-family: 'Gibson', sans-serif;
     background: black;
     color: white;
+    font-size: 18px;
+    line-height: 18px;
 }
 
 img{
@@ -83,7 +121,7 @@ img{
 }
 
 .right-content > *, .left-content > * {
-	font-size: 12pt;
+	font-size: 18px;
 }
 
 *{
@@ -284,10 +322,6 @@ img{
 }
 
 /* Home page styles */
-#home-text{
-	font-size: 12pt;
-}
-
 #home-carousel{
 	height: calc(100% - 100px);
 	padding-top: 0;
