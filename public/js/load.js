@@ -50,11 +50,11 @@ function loadPage(page){
 			//Otherwise fade in content
 			} else {
 				$.each($('.scale-text'), function(index, element){
-					scaleText(element);
+					$(element).scaleText();
 				});
 
-				$.each($('.scale-list'), function(index, element){
-					scaleList(element);
+				$.each($('.scale-parent'), function(index, element){
+					$(element).scaleContents();
 				});
 				pageObj.parent().find('.loader').fadeOut('fast', function(){
 					pageObj.addClass('visible');
@@ -85,25 +85,30 @@ $.fn.isOnScreen = function(){
      
 };
 
-function scaleText(elem) {
+$.fn.scaleText = function() {
       var fontstep = 2;
-      if ($(elem).height()>$(elem).parent().height() || $(elem).width()>$(elem).parent().width()) {
-        $(elem).css('font-size',(($(elem).css('font-size').substr(0,2)-fontstep)) + 'px').css('line-height',(($(elem).css('font-size').substr(0,2))) + 'px');
-        scaleText(elem);
+      if (this.height()>this.parent().height() || this.width()>this.parent().width()) {
+        this.css('font-size',((this.css('font-size').substr(0,2)-fontstep)) + 'px').css('line-height',((this.css('font-size').substr(0,2))) + 'px');
+        this.scaleText();
       }
     }
 
-function scaleList(elem){
-	var items = $(elem).find('.scale-list-item');
+$.fn.scaleContents = function(){
+	var items = this.children();
 
-	var target = $(elem).find('.scale-target');
-	var targetRightCoord = target.offset().left
-	var parent = $(elem).parent();
-	var parentRightCoord = parent.offset().left + parent.width();
+	var target = this.find('.scale-target');
+	target.right = target.offset().left;
+	target.bottom = target.offset().top;
+
+	var parent = this.parent();
+	parent.right= parent.offset().left + parent.outerWidth();
+	parent.bottom = parent.offset().top + parent.outerHeight();
+
+	console.log(parent, target);
+
 	var fontstep = 2;
-	console.log(targetRightCoord, parentRightCoord);
-	if( targetRightCoord > parentRightCoord){
+	if( target.right > parent.right || target.bottom > parent.bottom){
 		items.css('font-size',(target.css('font-size').substr(0,2)-fontstep) + 'px').css('line-height',((target.css('font-size').substr(0,2))) + 'px');
-        scaleList(elem);
+        this.scaleContents();
 	}
 }

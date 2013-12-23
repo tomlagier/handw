@@ -6,6 +6,8 @@
 	<img src="http://placehold.it/500x500" alt="Our team lower right" class="team-image">
 </div>
 <div id="team-bios-wrapper" class="right-content">
+	<div id="team-table-wrapper" class="scale-parent">
+	<div id="team-bios-upper">
 	<div class="team-bio">
 		<div class="upper-content">
 			<div class="image"><img src="http://placehold.it/100x100" alt="" class="team-thumb"></div>
@@ -42,7 +44,10 @@
 			<div class="signature">Somany.</div>
 		</div>
 	</div>
-	<div class="team-green-line"></div>
+	</div>
+	<div class="team-green-line">
+	</div>
+	<div id="team-bios-lower">
 	<div class="team-bio">
 		<div class="upper-content">
 			<div class="image"><img src="http://placehold.it/100x100" alt="" class="team-thumb"></div>
@@ -70,8 +75,10 @@
 				writers, proofreaders, photographers, food stylists,
 				illustrators, image retouchers and programmers,
 				ensuring each project is given the highest level
-				of service.</div>
+				of service.<span class="scale-target"></span></div>
 		</div>
+	</div>
+	</div>
 	</div>
 </div>
 <!-- End page content --> 

@@ -27,8 +27,9 @@
 				$active = false;	
 			}
 		?>
-		<div class="blog-post {{($activePost ? 'active' : '')}}" id="{{$post['slug']}}">
+		<div class="blog-post {{($activePost ? 'active' : '')}} scale-parent" id="{{$post['slug']}}">
 			{{$post['content']}}
+			<span class="scale-target"></span>
 		</div>
 		<?php $activePost = false; ?>
 	@endforeach
