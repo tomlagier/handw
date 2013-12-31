@@ -8,7 +8,8 @@
 <!-- End meta tags -->
 
 <!-- Begin head scripts -->
-<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<!-- <script src="//code.jquery.com/jquery-1.10.2.min.js"></script> -->
+<script src="js/jquery-1.10.js"></script>
 <script src="js/underscore.js"></script>
 <!-- End scripts -->
 
