@@ -1,6 +1,6 @@
 //Enable smooth scrolling
 $(document).ready(function(){
-	$('#main-nav > ul > .nav-item, #side-nav > ul > .nav-item').on('click touchstart', function(){
+	$('#main-nav > .nav-item, #side-nav > ul > .nav-item').on('click touchstart', function(){
 
 		//Get scroll target
 		var target = $($(this).attr('data-anchor'));
@@ -23,9 +23,9 @@ $(document).ready(function(){
     });
 
     $('#main-nav .nav-item[data-anchor=#portfolio]').hover(function(){
-        $('#portfolio-subnav').fadeIn();
+        $('#portfolio-subnav').stop().fadeIn();
     }, function(){
-        $('#portfolio-subnav').fadeOut();
+        $('#portfolio-subnav').stop().fadeOut();
     });
 });
 
@@ -38,10 +38,10 @@ $(document).ready(function(){
             $.each($('.page-contents'), function(index, element){
                 var target = $(element).attr('id');
                 if($(element).isNearScreen(0.51)){
-                    $('li[data-anchor=#' + target + ']').addClass('active');
+                    $('#main-nav div[data-anchor=#' + target + ']').addClass('active');
                 }
                 else{
-                    $('li[data-anchor=#' + target + ']').removeClass('active');
+                    $('#main-nav div[data-anchor=#' + target + ']').removeClass('active');
                 }
             });
         });

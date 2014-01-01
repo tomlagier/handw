@@ -73,22 +73,20 @@ img{
 
 .right-content{
 	width: 60%;
-	padding: 80px 93px 0 0;
 	font-size: 0;
-	position: absolute;
-	right: 0;
-	height: calc(100% - 225px);
-	top: 100px;
+	position: relative;
+	float: right;
+	height: 100%;
+	padding: 180px 65px 65px 32px;
 }
 
 .left-content{
 	font-size: 0;
 	position: relative;
-	padding: 80px 0 0 93px;
-	left: 0;
+	float: left;
 	width: 40%;
-	top: 100px;
-	height: calc(100% - 225px);
+	height:100%;
+	padding: 180px 32px 65px 65px;
 }
 
 .right-content > *, .left-content > * {
@@ -103,9 +101,7 @@ img{
 
 .page{
 	height: 1000px;
-	width: calc(100% - 40px);
-	margin: 20px;
-	background-size: 100%;
+	width: 100%;
 	position: relative;
 }
 
@@ -168,22 +164,70 @@ img{
 
 /* Navigation styles */
 
+/* General navigation styles */
+
 .nav-item:hover{
 	cursor: pointer;
 	color: white;
 }
 
-#main-nav .nav-item{
-	text-transform: uppercase;
-	border-left: 1px solid #999;
-	padding: 0 10px;
-	margin: 0;
-	color: #999;
+/* Main navigation styles */
+
+/*Horizontal distribution from http://stackoverflow.com/questions/6865194/fluid-width-with-equally-spaced-divs/6880421#6880421 */
+
+#main-nav{
+	height: 25%;
+	width: 100%;
+	text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+	position: absolute;
+	font-size: 1em;
+	bottom: 0;
+	padding: 0 40px 0 0;
+	padding: 0 -webkit-calc(2% + 32px) 0 0;
+	padding: 0 -moz-calc(2% + 32px) 0 0;
+	padding: 0 -ms-calc(2% + 32px) 0 0;
+	padding: 0 -o-calc(2% + 32px) 0 0;
+	padding: 0 calc(2% + 32px) 0 0;
 }
 
-#main-nav .nav-item:first-child{
-	border-left: none;
+#main-nav .stretch{
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
 }
+
+#main-nav .nav-item{
+	display: inline-block;
+	text-transform: uppercase;
+	margin: 0;
+	color: #999;
+	*display:inline;
+	zoom: 1;
+	vertical-align:top;
+}
+
+#main-nav .spacer{
+	color: #999;
+	display: inline-block;
+	*display:inline;
+	zoom: 1;
+	vertical-align:top;
+}
+
+#main-nav .nav-item.active{
+	color: white;
+}
+
+#main-nav .nav-item:hover{
+	color: #669933;
+}
+
+
+
+/* Side navigation styles */
 
 #side-nav{
 	position: fixed;
@@ -207,30 +251,25 @@ img{
 	background: #669933;
 }
 
-#main-nav .nav-item.active{
-	color: white;
-}
 
-#main-nav .nav-item:hover{
-	color: #669933;
-}
+/* Portfolio navigation styles */
 
-#main-nav li{
-	display: inline-block;
-	margin 0 10px;
-}
 
 #portfolio-subnav{
 	padding: 0px;
 	display: none;
 	position: absolute;
 	margin: 0px;
+	background: black;
+	box-shadow: 0 12px 31px 6px rgba(0,0,0,.8);
+	border-radius:  0 0 3px 3px;
 }
 
 #portfolio-subnav .nav-item{
 	display: block;
 	padding: 0;
 	border: 0;
+	margin: 5px;
 }
 
 /* Header styles */
@@ -239,38 +278,71 @@ img{
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	padding: 10px 0 0 40px;
+	padding: 65px 65px 0 65px;
 	background: black;
 	z-index: 10;
 	width: 100%;
 	color: white;
-	height: 118px;
+	height: 155px;
 	box-shadow: 0 0 30px black;
+	font-size: 0;
 }
 
-.before-nav > div{
-	display: inline-block;
+/* Logo, social icons, and main menu */
+
+.left-nav-block{
+	width: 40%;
+	height: 100%;
+	font-size: 18px;
+	float: left;
+	position: relative;
 }
 
-.before-nav{
-	height: 60px;
-}
-
-#logo{
-	margin-right: 5%;
-	vertical-align: top;
+.right-nav-block{
+	position: relative;
+	right: 0;
+	width: 60%;
+	font-size: 18px;
+	float: right;
 	height: 100%;
 }
 
+/* Logo */
 
-#logo img{
-	width: 100%;
+#logo{
+	float: left;
+	width: 50%;
+	height: 50%;
+}
+
+
+/*Social icons */
+
+/*Square hack from http://stackoverflow.com/questions/11243075/css-scale-height-to-match-width-possibly-with-a-formfactor */
+
+#social{
+	float: right;
+	font-size: 0;
+	width: 50%;
+	height: 50%;
+	font-size: 0;
+	padding-right: 32px;
 }
 
 .social-icon{
+	float: right;
+	position: relative;
 	display: inline-block;
-	width: 50px;
-	height: 50px; 
+	width: 12%;
+	height: 12%;
+	margin: 0 4%;
+	padding-bottom: 12%; 
+}
+
+.social-icon .icon{
+	width: 100%;
+	height: 100%;
+	position: absolute;
 	background: lightgray;
 }
 
@@ -292,11 +364,7 @@ img{
 	z-index: 9;
 }
 
-/* Home page styles */
-#home-carousel{
-	height: calc(100% - 100px);
-	padding-top: 0;
-}
+/*Home page styles */
 
 /* Portfolio page styles */
 
@@ -503,8 +571,18 @@ img{
 	position: fixed;
 	width: 100%;
 	bottom: 0;
-	padding: 20px 90px;
-	background: black;
-	font-size: .9em;
-	box-shadow: 0 0 30px black;
+	height: 65px;
+	padding: 20px 65px;
+	/*background: black;*/
+	font-size: .8em;
+	/*box-shadow: 0 0 30px black;*/
+}
+
+#footer a{
+	color: white;
+}
+
+#footer a:hover{
+	color: #669933;
+	text-decoration: none;
 }
