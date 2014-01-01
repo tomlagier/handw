@@ -1,5 +1,5 @@
 <!-- Begin main navigation -->
-<div id="main-nav" class="navigation">
+<div id="main-nav" class="navigation scale-text">
 		<div class="nav-item" data-anchor="#home">Home</div>
 		<div class="spacer">|</div>
 		<div class="nav-item" data-anchor="#services">Services</div>

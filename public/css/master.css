@@ -182,7 +182,6 @@ img{
     -ms-text-justify: distribute-all-lines;
     text-justify: distribute-all-lines;
 	position: absolute;
-	font-size: 1em;
 	bottom: 0;
 	padding: 0 40px 0 0;
 	padding: 0 -webkit-calc(2% + 32px) 0 0;
