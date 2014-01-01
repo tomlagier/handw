@@ -38,6 +38,8 @@ $(window).on('load resize', function(){
     $('body').height($('.page').height() * 6 - 75);
     $('.page').waypoint('destroy');
     bindWaypoints();
+
+    $('#main-nav .scale-parent').scaleContents();
 });
 
 //Loads a given page
@@ -119,8 +121,8 @@ $.fn.scaleContents = function(){
 	var items = this.children();
 
 	var target = this.find('.scale-target');
-	target.right = target.offset().left;
-	target.bottom = target.offset().top;
+	target.right = target.offset().left + target.outerWidth();
+	target.bottom = target.offset().top + target.outerHeight();
 
 	var parent = this.parent();
 	parent.right= parent.offset().left + parent.outerWidth();

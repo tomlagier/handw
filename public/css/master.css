@@ -178,9 +178,6 @@ img{
 #main-nav{
 	height: 25%;
 	width: 100%;
-	text-align: justify;
-    -ms-text-justify: distribute-all-lines;
-    text-justify: distribute-all-lines;
 	position: absolute;
 	bottom: 0;
 	padding: 0 40px 0 0;
@@ -189,6 +186,15 @@ img{
 	padding: 0 -ms-calc(2% + 32px) 0 0;
 	padding: 0 -o-calc(2% + 32px) 0 0;
 	padding: 0 calc(2% + 32px) 0 0;
+}
+
+#main-nav .nav-wrapper{
+	text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
 }
 
 #main-nav .stretch{
@@ -206,6 +212,12 @@ img{
 	*display:inline;
 	zoom: 1;
 	vertical-align:top;
+}
+
+#main-nav .scale-target{
+	*display: inline;
+	zoom: 1;
+	vertical-align: top;
 }
 
 #main-nav .spacer{
@@ -306,6 +318,20 @@ img{
 	height: 100%;
 }
 
+@media screen and (max-width: 900px){
+	.left-nav-block{
+		width: 100%;
+	}
+
+	.right-nav-block{
+		width: 100%;
+	}
+
+	#main-nav{
+		padding-right: 0;
+	}
+}
+
 /* Logo */
 
 #logo{
@@ -326,6 +352,13 @@ img{
 	height: 50%;
 	font-size: 0;
 	padding-right: 32px;
+}
+
+@media screen and (max-width: 900px){
+	#social{
+		padding-right: 0;
+		margin-right: -2.5%;
+	}
 }
 
 .social-icon{
