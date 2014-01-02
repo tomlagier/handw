@@ -32,6 +32,11 @@ function bindWaypoints(){
 
 }
 
+$(document).ready(function(){
+	$('.page').height($(window).height());
+    $('body').height($('.page').height() * 6 - 75);
+});
+
 //Set individual page height to window height, then (re)bind waypoints
 $(window).on('load resize', function(){
     $('.page').height($(window).height());
@@ -40,6 +45,8 @@ $(window).on('load resize', function(){
     bindWaypoints();
 
     $('#main-nav .scale-parent').scaleContents();
+    $('#main-nav').height($('#main-nav .nav-item').css('font-size').match(/^\d*/));
+    $('.left-nav-block').css('opacity', '1');
 });
 
 //Loads a given page
@@ -96,8 +103,8 @@ $.fn.isOnScreen = function(){
     viewport.bottom = viewport.top + win.height();
      
     var bounds = this.offset();
-    bounds.right = bounds.left + this.outerWidth();
-    bounds.bottom = bounds.top + this.outerHeight();
+    bounds.right = bounds.left + this.outerWidth() - 1;
+    bounds.bottom = bounds.top + this.outerHeight() - 1;
      
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
      
@@ -121,8 +128,8 @@ $.fn.scaleContents = function(){
 	var items = this.children();
 
 	var target = this.find('.scale-target');
-	target.right = target.offset().left + target.outerWidth();
-	target.bottom = target.offset().top + target.outerHeight();
+	target.right = target.offset().left + target.width();
+	target.bottom = target.offset().top + target.height();
 
 	var parent = this.parent();
 	parent.right= parent.offset().left + parent.outerWidth();

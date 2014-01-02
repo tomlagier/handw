@@ -6,6 +6,7 @@
 	<img src="http://placehold.it/500x500" alt="Our team lower right" class="team-image">
 </div>
 <div id="team-bios-wrapper" class="right-content">
+	<div class="team-wrapper">
 	<div id="team-table-wrapper" class="scale-parent">
 	<div id="team-bios-upper">
 	<div class="team-bio">
@@ -75,8 +76,9 @@
 				writers, proofreaders, photographers, food stylists,
 				illustrators, image retouchers and programmers,
 				ensuring each project is given the highest level
-				of service.<span class="scale-target"></span></div>
+				of service<span class="scale-target">.</span></div>
 		</div>
+	</div>
 	</div>
 	</div>
 	</div>

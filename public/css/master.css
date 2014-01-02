@@ -179,16 +179,17 @@ img{
 	height: 25%;
 	width: 100%;
 	position: absolute;
-	bottom: 0;
+	bottom: 10px;
 	padding: 0 40px 0 0;
 	padding: 0 -webkit-calc(2% + 32px) 0 0;
 	padding: 0 -moz-calc(2% + 32px) 0 0;
 	padding: 0 -ms-calc(2% + 32px) 0 0;
 	padding: 0 -o-calc(2% + 32px) 0 0;
 	padding: 0 calc(2% + 32px) 0 0;
+
 }
 
-#main-nav .nav-wrapper{
+#main-nav .nav-wrapper, #portfolio-nav .nav-wrapper{
 	text-align: justify;
     -ms-text-justify: distribute-all-lines;
     text-justify: distribute-all-lines;
@@ -197,7 +198,7 @@ img{
     font-size: 18px;
 }
 
-#main-nav .stretch{
+#main-nav .stretch, #portfolio-nav .stretch{
     width: 100%;
     display: inline-block;
     font-size: 0;
@@ -205,10 +206,10 @@ img{
 }
 
 #main-nav .nav-item{
-	display: inline-block;
 	text-transform: uppercase;
 	margin: 0;
 	color: #999;
+	display: inline-block;
 	*display:inline;
 	zoom: 1;
 	vertical-align:top;
@@ -220,7 +221,7 @@ img{
 	vertical-align: top;
 }
 
-#main-nav .spacer{
+#main-nav .spacer, #portfolio-nav .spacer{
 	color: #999;
 	display: inline-block;
 	*display:inline;
@@ -307,6 +308,7 @@ img{
 	font-size: 18px;
 	float: left;
 	position: relative;
+	opacity: 0;
 }
 
 .right-nav-block{
@@ -445,25 +447,54 @@ img{
 	width: 5%;
 }
 
-#portfolio-nav{	
-	position: fixed;
-	top: 84px;
-	right: 36%;
+/* Portfolio navigation */
+
+
+#portfolio-nav{
 	z-index: 10;
 	opacity: 0;
+	position:absolute;
+	bottom: 10px;
+	left: 0;
+	padding-left: 18px;
+	width: 50%;
 }
 
-#portfolio-nav.faded{
-	opacity: 1;
+@media screen and (max-width: 900px){	
+	#portfolio-nav{
+		top: 10px;
+		padding: 0;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
+
+	.right-nav-block{
+		text-align: center;
+	}
 }
+
+@media screen and (max-width: 1100px){
+	#portfolio-nav{
+		width: 75%;
+	}
+}
+
+/*#portfolio-nav.faded{
+	opacity: 1;
+}*/
 
 .portfolio-nav-item{
 	display: inline-block;
 	text-transform: uppercase;
-	border-right: 1px solid white;
-	padding: 0 10px;
 	margin: 0;
 	color: #999;
+	display: inline-block;
+	*display:inline;
+	zoom: 1;
+	vertical-align:bottom;
 }
 
 .portfolio-nav-item:hover{
@@ -473,10 +504,6 @@ img{
 
 .portfolio-nav-item.active{
 	color: white;
-}
-
-.portfolio-nav-item:last-child{
-	border-right: 0;
 }
 
 /* Services Page styles */
@@ -512,6 +539,11 @@ img{
 
 #team-bios-wrapper{
 	padding-left: 50px;
+}
+
+.team-wrapper{
+	height: 100%;
+	width: 100%;
 }
 
 #team-table-wrapper{

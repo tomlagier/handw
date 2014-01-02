@@ -1,6 +1,6 @@
 //Enable smooth scrolling
 $(document).ready(function(){
-	$('#main-nav > .nav-item, #side-nav > ul > .nav-item').on('click touchstart', function(){
+	$('#main-nav > div > .nav-item, #side-nav > ul > .nav-item').on('click touchstart', function(){
 
 		//Get scroll target
 		var target = $($(this).attr('data-anchor'));
@@ -38,10 +38,10 @@ $(document).ready(function(){
             $.each($('.page-contents'), function(index, element){
                 var target = $(element).attr('id');
                 if($(element).isNearScreen(0.51)){
-                    $('#main-nav div[data-anchor=#' + target + ']').addClass('active');
+                    $('.navigation [data-anchor=#' + target + ']').addClass('active');
                 }
                 else{
-                    $('#main-nav div[data-anchor=#' + target + ']').removeClass('active');
+                    $('.navigation [data-anchor=#' + target + ']').removeClass('active');
                 }
             });
         });
@@ -79,10 +79,10 @@ var snap = _.debounce(function(event){
 
              setTimeout(function(){
                  window.preventSnap = false;
-             }, 550);
+             }, 650);
         }
     });  
-}, 500);
+}, 600);
 
 window.preventSnap = false;
 window.preventScroll = false;
@@ -116,3 +116,12 @@ $.fn.isNearScreen = function(percent){
     return false;
      
 };
+
+/**
+ * Returns "true" if the item is more than percent visible. Elements that
+ * @param  {[type]}  percent [description]
+ * @return {Boolean}         [description]
+ */
+$.fn.isPercentVisible = function(percent){
+
+}

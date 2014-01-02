@@ -1,43 +1,63 @@
 <!-- Begin portfolio page -->
 <!-- Begin portfolio navigation -->
-<div id="portfolio-nav" class="fadein-fast">
-  <div class="portfolio-nav-item active" data-href="alcohol">Alcohol</div>
-  <div class="portfolio-nav-item" data-href="packaging">Packaging</div>
-  <div class="portfolio-nav-item" data-href="branding">Branding</div>
-  <div class="portfolio-nav-item" data-href="clients">Clients</div>
+<div id="portfolio-nav" class="fadein-fast" data-active="">
+  <div class="nav-wrapper">
+    <div class="portfolio-nav-item active" data-href="alcohol">Alcohol</div>
+    <div class="spacer">|</div>
+    <div class="portfolio-nav-item" data-href="packaging">Packaging</div>
+    <div class="spacer">|</div>
+    <div class="portfolio-nav-item" data-href="branding">Branding</div>
+    <div class="spacer">|</div>
+    <div class="portfolio-nav-item" data-href="clients">Clients</div>
+    <div class="stretch"></div>
+  </div>
 </div>
 <script>
   setTimeout(function(){
     $('#portfolio').waypoint({
       handler: function(){
         setupPortfolioNav();
-        $('#portfolio-nav').addClass('faded');
-        setTimeout(function(){
-           $('#portfolio-nav').waypoint('enable');
-        }, 450);
       },
       offset: 0,
       triggerOnce: true
     });
-     $('#portfolio-nav').waypoint({
-      handler: function(){
-        $(this).toggleClass('faded');
-      },
-      offset: 81,
-      enabled: false
-    });
-    $('#portfolio-nav').waypoint({
-      handler: function(){
-       $(this).toggleClass('faded'); 
-      },
-      offset: 160,
-      enabled: false
-    });
   }, 800);
 
-  function setupPortfolioNav(){
-    $('.portfolio-nav-item').on('click touchstart', function(){
+  var toggleState = function(){
+    var state = $('#portfolio-nav').attr('data-active'); 
+    if (state === "true"){
+      if(!$('#portfolio').isNearScreen(0.35)){
+        $('#portfolio-nav').css('opacity', '0');
+        $('#portfolio-nav').attr('data-active', '');
+      }
+    } else {
+      if($('#portfolio').isNearScreen(0.35) && $('#portfolio').isOnScreen()){
+        console.log("showing");
+        $('#portfolio-nav').css('opacity', '1');
+        $('#portfolio-nav').attr('data-active', 'true');
 
+      }
+    }
+  };
+
+  function setupPortfolioNav(){
+
+    $('#portfolio-nav').appendTo('.right-nav-block');
+
+    var targetSize = $('#main-nav .nav-item').css('font-size');
+
+    $('.portfolio-nav-item').css('font-size', targetSize);
+    $('#portfolio-nav').height(targetSize.match(/^\d*/));
+
+    toggleState();
+
+    setTimeout(function(){
+      $('#portfolio-nav').css('opacity', '1');
+    }, 0);
+    
+    $(window).on('scroll', toggleState);
+
+    $('.portfolio-nav-item').on('click touchstart', function(){
 
         var target = $('#' + $(this).attr('data-href'));
         
