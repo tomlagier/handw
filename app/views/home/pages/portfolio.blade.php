@@ -24,20 +24,22 @@
   }, 800);
 
   var toggleState = function(){
-    var state = $('#portfolio-nav').attr('data-active'); 
-    if (state === "true"){
-      if(!$('#portfolio').isNearScreen(0.35)){
-        $('#portfolio-nav').css('opacity', '0');
-        $('#portfolio-nav').attr('data-active', '');
-      }
-    } else {
-      if($('#portfolio').isNearScreen(0.35) && $('#portfolio').isOnScreen()){
-        console.log("showing");
-        $('#portfolio-nav').css('opacity', '1');
-        $('#portfolio-nav').attr('data-active', 'true');
+    setTimeout(function(){
+      var state = $('#portfolio-nav').attr('data-active'); 
+      if (state === "true"){
+        if(!$('#portfolio').isNearScreen(0.35)){
+          $('#portfolio-nav').css('opacity', '0');
+          $('#portfolio-nav').attr('data-active', '');
+        }
+      } else {
+        if($('#portfolio').isNearScreen(0.35) && $('#portfolio').isOnScreen()){
+          console.log("showing");
+          $('#portfolio-nav').css('opacity', '1');
+          $('#portfolio-nav').attr('data-active', 'true');
 
+        }
       }
-    }
+    }, 300);
   };
 
   function setupPortfolioNav(){

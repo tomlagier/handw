@@ -44,6 +44,10 @@
 
 /* Font scaling */
 
+#team .scale-target{
+	opacity: 0;
+}
+
 .scale-target{
 	display: inline-block;
 	float: right;
@@ -446,7 +450,7 @@ img{
 .portfolio-carousel .carousel-control{
 	width: 5%;
 }
-
+ 
 /* Portfolio navigation */
 
 

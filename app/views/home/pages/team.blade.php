@@ -76,7 +76,7 @@
 				writers, proofreaders, photographers, food stylists,
 				illustrators, image retouchers and programmers,
 				ensuring each project is given the highest level
-				of service<span class="scale-target">.</span></div>
+				of service.<span class="scale-target">*</span></div>
 		</div>
 	</div>
 	</div>
