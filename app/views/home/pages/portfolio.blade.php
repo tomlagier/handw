@@ -42,7 +42,7 @@
 
   <!-- Secondary Indicators -->
    <ol class="carousel-indicators secondary">
-    <li data-target="#alcohol" data-slide-to="0" class="active"></li>
+    <li data-target="#alcohol" data-slide-to="0" class="alternate-active"></li>
     <li data-target="#alcohol" data-slide-to="1"></li>
     <li data-target="#alcohol" data-slide-to="2"></li>
   </ol>
@@ -59,15 +59,15 @@
       <div class="item">
         <img src="http://placehold.it/900x900" alt="Placeholder">
       </div>
-
-      <!-- Controls -->
-      <a class="left carousel-control" href="#alcohol" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="right carousel-control" href="#alcohol" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
     </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#alcohol" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#alcohol" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
     
   </div>
 
@@ -102,7 +102,7 @@
 
   <!-- Secondary Indicators -->
    <ol class="carousel-indicators secondary">
-    <li data-target="#packaging" data-slide-to="0" class="active"></li>
+    <li data-target="#packaging" data-slide-to="0" class="alternate-active"></li>
     <li data-target="#packaging" data-slide-to="1"></li>
     <li data-target="#packaging" data-slide-to="2"></li>
   </ol>
@@ -161,7 +161,7 @@
 
 <!-- Secondary Indicators -->
    <ol class="carousel-indicators secondary">
-    <li data-target="#branding" data-slide-to="0" class="active"></li>
+    <li data-target="#branding" data-slide-to="0" class="alternate-active"></li>
     <li data-target="#branding" data-slide-to="1"></li>
     <li data-target="#branding" data-slide-to="2"></li>
   </ol>
@@ -220,7 +220,7 @@
 
   <!-- Secondary Indicators -->
    <ol class="carousel-indicators secondary">
-    <li data-target="#clients" data-slide-to="0" class="active"></li>
+    <li data-target="#clients" data-slide-to="0" class="alternate-active"></li>
     <li data-target="#clients" data-slide-to="1"></li>
     <li data-target="#clients" data-slide-to="2"></li>
   </ol>

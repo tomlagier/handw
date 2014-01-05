@@ -517,6 +517,13 @@ img{
 	margin: 0;
 }
 
+.portfolio-carousel .secondary.carousel-indicators .alternate-active{
+	background: #669933;
+	margin: 1px;
+	width: 10px;
+	height: 10px;
+}
+
 .portfolio-carousel .portfolio-thumb-wrapper{
 	position: absolute;
 	width: 100%;
@@ -552,6 +559,10 @@ img{
 
 .portfolio-carousel .active .portfolio-thumb-caption{
 	color: white;
+}
+
+#portfolio .carousel-control.right{
+	right: 32px;
 }
 
 /* Portfolio navigation */

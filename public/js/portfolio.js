@@ -75,8 +75,9 @@
 var setupSecondaryNav = function(){
     $('.carousel').on('slid.bs.carousel', function(){
       var targetIndex = $(this).find('.carousel-inner .item.active').index();
+      $(this).find('.carousel-indicators.secondary li').removeClass('alternate-active');
       var targetNav = $(this).find('.carousel-indicators.secondary li:eq(' + targetIndex + ')');
-      targetNav.addClass('active');
+      targetNav.addClass('alternate-active');
     });
 }();
 
