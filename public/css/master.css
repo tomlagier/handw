@@ -44,7 +44,7 @@
 
 /* Font scaling */
 
-#team .scale-target{
+#team .scale-target, #services .scale-target{
 	opacity: 0;
 }
 
@@ -90,7 +90,7 @@ img{
 	float: left;
 	width: 40%;
 	height:100%;
-	padding: 180px 32px 65px 65px;
+	padding: 180px 28px 65px 65px;
 }
 
 .right-content > *, .left-content > * {
@@ -259,7 +259,7 @@ img{
 #side-nav .nav-item{
 	height: 10px;
 	width: 10px;
-	background: lightgray;
+	background: white;
 	margin: 5px;
 }
 
@@ -381,7 +381,7 @@ img{
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background: lightgray;
+	background: #999;
 }
 
 .social-icon:hover{
@@ -402,23 +402,32 @@ img{
 	z-index: 9;
 }
 
+.carousel-indicators li{
+	border: none;
+	border-radius: 0;
+	background: white;
+}
+
+.carousel-indicators li.active{
+	background: #669933;
+	width: 10px;
+	height: 10px;
+	margin: 1px;
+}
+
 /*Home page styles */
+
+#home .carousel-indicators, #portfolio .secondary.carousel-indicators{
+	right: 0;
+	left: auto;
+	text-align: right;
+	margin-right: 125px;
+}
 
 /* Portfolio page styles */
 
-.portfolio-carousel .carousel-inner{
-	height: calc(100% - 318px);
-	top: 218px;
-	width: 50%;
-	right: 5%;
-	padding-top: 0;
-}
-
 .portfolio-carousel{
 	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	display: none;
 }
@@ -427,30 +436,90 @@ img{
 	display: block;
 }
 
-.portfolio-carousel .carousel-indicators{
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	height: calc(100% - 318px);
-	top: 218px;
-	width: 30%;
-	left: 5%;
-	font-size: 0;
+.portfolio-carousel .carousel-inner{
+	right: auto;
+	white-space: nowrap;
 }
 
-.portfolio-carousel .carousel-indicators li{
-	width: 49%;
+.portfolio-carousel .slide-wrapper{
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	position: relative;
+}
+
+/* Overload Bootstrap carousel CSS to allow for correct slide sizing */
+
+.portfolio-carousel .carousel-inner .slide-wrapper > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+.portfolio-carousel .carousel-inner .slide-wrapper > .item > img,
+.portfolio-carousel .carousel-inner .slide-wrapper > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  line-height: 1;
+}
+.portfolio-carousel .carousel-inner .slide-wrapper > .active,
+.portfolio-carousel .carousel-inner .slide-wrapper > .next,
+.portfolio-carousel .carousel-inner .slide-wrapper > .prev {
+  display: block;
+}
+.portfolio-carousel .carousel-inner .slide-wrapper > .active {
+  left: 0;
+}
+.portfolio-carousel .carousel-inner .slide-wrapper > .next,
+.portfolio-carousel .carousel-inner .slide-wrapper > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.portfolio-carousel .carousel-inner .slide-wrapper > .next {
+  left: 100%;
+}
+.portfolio-carousel .carousel-inner .slide-wrapper > .prev {
+  left: -100%;
+}
+.portfolio-carousel .carousel-inner .slide-wrapper > .next.left,
+.portfolio-carousel .carousel-inner .slide-wrapper > .prev.right {
+  left: 0;
+}
+.portfolio-carousel .carousel-inner .slide-wrapper > .active.left {
+  left: -100%;
+}
+.portfolio-carousel .carousel-inner .slide-wrapper > .active.right {
+  left: 100%;
+}
+
+/* End Bootstrap carousel styles */
+
+
+.portfolio-carousel .primary.carousel-indicators{
+	margin: 0;
+	text-align: left;
+	left: auto;
+	font-size: 0;
+	line-height: 0;
+	bottom: 0;
+}
+
+.portfolio-carousel .primary.carousel-indicators li{
+	width: 50%;
 	height: 50%;
 	z-index: 999;
 	position: relative;
 	text-indent: 0;
 	display: inline-block;
+	margin: 0;
 }
 
 .portfolio-carousel .carousel-control{
 	width: 5%;
 }
- 
+
 /* Portfolio navigation */
 
 
@@ -498,7 +567,7 @@ img{
 	display: inline-block;
 	*display:inline;
 	zoom: 1;
-	vertical-align:bottom;
+	vertical-align:top;
 }
 
 .portfolio-nav-item:hover{
@@ -512,9 +581,9 @@ img{
 
 /* Services Page styles */
 
-.services-item{
-	margin-bottom: 10px;
-	color: #999;
+#services-nav > ol{
+	margin: 0;
+	padding: 0 0 0 25px;
 }
 
 .services-nav-item{
@@ -530,13 +599,25 @@ img{
 	cursor: pointer;
 }
 
+
+.services-list{
+	list-style: number;
+	padding: 0 0 0 17px;
+}
+
+.services-item{
+	margin-bottom: 10px;
+	color: #999;
+}
+
 .services-item.active{
 	color: white;
 	font-size: 110%;
 }
 
-.services-list{
-	list-style: number;
+
+.services-item:last-child{
+	margin-bottom: 0;
 }
 
 /* Team Page styles */
