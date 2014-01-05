@@ -23,19 +23,25 @@
     <li data-target="#alcohol" data-slide-to="0" class="active">
       <div class="portfolio-thumb-wrapper">
       <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Locovore</div></div>
       </div>
     </li>
     <li data-target="#alcohol" data-slide-to="1">
       <div class="portfolio-thumb-wrapper">
       <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Forgive Us Our Zins</div></div>
       </div>
     </li>
     <li data-target="#alcohol" data-slide-to="2">
       <div class="portfolio-thumb-wrapper">
       <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Root Cause</div></div>
+      </div>
+    </li>
+    <li data-target="#alcohol" data-slide-to="3">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Full Moon</div></div>
       </div>
     </li>
   </ol>
@@ -45,12 +51,16 @@
     <li data-target="#alcohol" data-slide-to="0" class="alternate-active"></li>
     <li data-target="#alcohol" data-slide-to="1"></li>
     <li data-target="#alcohol" data-slide-to="2"></li>
+    <li data-target="#alcohol" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner right-content">
     <div class="slide-wrapper">
       <div class="item active">
+        <img src="http://placehold.it/900x900" alt="Placeholder">
+      </div>
+      <div class="item">
         <img src="http://placehold.it/900x900" alt="Placeholder">
       </div>
       <div class="item">
@@ -83,19 +93,25 @@
     <li data-target="#packaging" data-slide-to="0" class="active">
       <div class="portfolio-thumb-wrapper">
       <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Imperial Garden</div></div>
       </div>
     </li>
     <li data-target="#packaging" data-slide-to="1">
       <div class="portfolio-thumb-wrapper">
       <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Buzz</div></div>
       </div>
     </li>
     <li data-target="#packaging" data-slide-to="2">
       <div class="portfolio-thumb-wrapper">
       <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Alice's Kitchen</div></div>
+      </div>
+    </li>
+    <li data-target="#packaging" data-slide-to="3">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Red Envelope</div></div>
       </div>
     </li>
   </ol>
@@ -105,6 +121,7 @@
     <li data-target="#packaging" data-slide-to="0" class="alternate-active"></li>
     <li data-target="#packaging" data-slide-to="1"></li>
     <li data-target="#packaging" data-slide-to="2"></li>
+    <li data-target="#packaging" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -112,6 +129,9 @@
      <div class="slide-wrapper">
         <div class="item active">
          <img src="http://placehold.it/900x900" alt="Placeholder">
+       </div>
+       <div class="item">
+          <img src="http://placehold.it/900x900" alt="Placeholder">
        </div>
        <div class="item">
           <img src="http://placehold.it/900x900" alt="Placeholder">
@@ -142,19 +162,25 @@
     <li data-target="#branding" data-slide-to="0" class="active">
       <div class="portfolio-thumb-wrapper">
       <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">HMR Foods</div></div>
       </div>
     </li>
     <li data-target="#branding" data-slide-to="1">
       <div class="portfolio-thumb-wrapper">
       <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Crush</div></div>
       </div>
     </li>
     <li data-target="#branding" data-slide-to="2">
       <div class="portfolio-thumb-wrapper">
       <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Fujisan Fresh Sushi</div></div>
+      </div>
+    </li>
+    <li data-target="#branding" data-slide-to="3">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">XXX</div></div>
       </div>
     </li>
   </ol>
@@ -164,6 +190,7 @@
     <li data-target="#branding" data-slide-to="0" class="alternate-active"></li>
     <li data-target="#branding" data-slide-to="1"></li>
     <li data-target="#branding" data-slide-to="2"></li>
+    <li data-target="#branding" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -176,6 +203,9 @@
         <img src="http://placehold.it/900x900" alt="Placeholder">
             </div>
             <div class="item">
+        <img src="http://placehold.it/900x900" alt="Placeholder">
+        </div>
+        <div class="item">
         <img src="http://placehold.it/900x900" alt="Placeholder">
         </div>
       </div>
@@ -193,61 +223,21 @@
 </div>
 <!-- End branding carousel -->
 
-<!-- Begin clients carousel -->
-<div id="clients" class="portfolio-carousel carousel slide" data-ride="carousel">
+<!-- Begin clients info window -->
+<div id="clients" class="portfolio-carousel carousel slide">
 
-  <!-- Indicators -->
-  <ol class="carousel-indicators left-content primary">
-    <li data-target="#clients" data-slide-to="0" class="active">
-      <div class="portfolio-thumb-wrapper">
-      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
-      </div>
-    </li>
-    <li data-target="#clients" data-slide-to="1">
-      <div class="portfolio-thumb-wrapper">
-      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
-      </div>
-    </li>
-    <li data-target="#clients" data-slide-to="2">
-      <div class="portfolio-thumb-wrapper">
-      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
-      </div>
-    </li>
-  </ol>
-
-  <!-- Secondary Indicators -->
-   <ol class="carousel-indicators secondary">
-    <li data-target="#clients" data-slide-to="0" class="alternate-active"></li>
-    <li data-target="#clients" data-slide-to="1"></li>
-    <li data-target="#clients" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner right-content">
-    <div class="slide-wrapper">
-      <div class="item active">
-        <img src="http://placehold.it/900x900" alt="Placeholder">
-      </div>
-      <div class="item">
-        <img src="http://placehold.it/900x900" alt="Placeholder">
-      </div>
-      <div class="item">
-        <img src="http://placehold.it/900x900" alt="Placeholder">
-      </div>
+  <div class="clients-text left-content">
+    <div class="clients-text-wrapper scale-text">
+          In addition to our current client roster, our team members have many years of experience in international studios, overseeing work for global household names, including Britvic, Buca Di Beppo, Coffee Bean & Tea Leaf, Costco, Doritos, El Pollo Loco, Guy Fieri,  Jack Daniels, Target, Tesco, Pepsi, Unilever,   WalMart and 7UP.
+​          <br><br>
+          Our team has a comprehensive background with licenses for Disney, DreamWorks, Fox and Hallmark among others. We're the right agency for your needs, and we look forward to making your brand shine.
     </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#clients" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#clients" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-
   </div>
+
+  <div class="clients-image right-content">
+    <img src="http://placehold.it/900x900">
+  </div>
+
 </div>
-<!-- End clients carousel -->
+<!-- End clients info window -->
 <!-- End portfolio page -->

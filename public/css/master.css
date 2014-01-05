@@ -101,6 +101,15 @@ img{
 	box-sizing: border-box;
 }
 
+a{
+	color: white;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #669933;
+}
+
 /* General Page styles */
 
 .page{
@@ -576,8 +585,6 @@ img{
 	display: table;
 	height: 18%;
 	width: 100%;
-	width: calc(100% + 1px);
-	width: -webkit-calc(100% + 1px);
 	padding: 0 0 0 10px;
 	background: #999;
 	color: #666;
@@ -680,7 +687,7 @@ img{
 
 .services-list{
 	list-style: number;
-	padding: 0 0 0 17px;
+	padding: 0 0 0 20px;
 }
 
 .services-item{

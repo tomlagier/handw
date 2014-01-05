@@ -2,10 +2,10 @@
 <!-- Begin text content -->
 <div id="home-text-wrapper" class="left-content">
 <div id="home-text" class="scale-text">
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius metus urna, id mattis dolor dictum ut. Pellentesque velit dui, laoreet eu mauris non, vulputate sodales risus. Pellentesque auctor turpis vitae vestibulum luctus. Ut condimentum venenatis nulla, quis euismod erat ultrices nec. Praesent sodales auctor pellentesque. Morbi lorem turpis, porttitor ut vehicula et, consequat et sapien. Donec ac tristique tellus. Quisque rutrum venenatis suscipit. Ut quis luctus nisi. Cras urna orci, mattis eget rhoncus non, volutpat tempor arcu.
-
-	Maecenas massa purus, lacinia sit amet ornare sit amet, tincidunt quis tortor. Vivamus et velit erat. Maecenas porttitor tortor mattis lacus adipiscing malesuada. Fusce tincidunt, velit sed ultrices porttitor, nunc est consectetur lorem, a consequat elit nibh id dolor. Proin tempus congue dictum. Nunc lobortis pharetra dolor in bibendum. Curabitur semper commodo quam, nec gravida nulla semper ut. Etiam et dignissim sapien, vel malesuada metus. Cras eu nisi a ligula facilisis bibendum. Donec elementum felis eros, id condimentum libero tincidunt at.
-  </div>
+Hello. We're Hanson & Wen, a Los Angeles-based design agency. We focus on packaging and brand management, and we've worked across many industries, having particularly strong relationships within the food, alcohol and consumer goods sectors.
+<br><br>
+We've brought together an exciting, experienced team of energetic professionals to build something special with our clients, so we can work with you to help you achieve your goals. Our aim is to maximize your product's potential. We can create, manage or expand your brand and work closely with you from concept to final print, overseeing each stage with experience and knowledge of the industry, allowing you to focus on your core responsibilities.
+</div>
 </div>
 <!-- End text content -->
 <!-- Begin carousel -->

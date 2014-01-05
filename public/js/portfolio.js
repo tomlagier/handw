@@ -82,3 +82,5 @@ var setupSecondaryNav = function(){
 }();
 
 $('#portfolio .portfolio-thumb-caption').css('font-size', $('#main-nav .nav-item').css('font-size'));
+
+$('#portfolio .scale-text').scaleText();

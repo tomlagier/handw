@@ -9,7 +9,7 @@
 	</div>
 	<div class="contact-block">
 		<div class="email-label">All email enquiries:</div>
-		<div class="email">hello@hansonandwen.com</div>
+		<div class="email"><a href="mailto:hello@hansonandwen.com">hello@hansonandwen.com</a></div>
 	</div>
 	<div class="contact-block">
 		<div class="address-label">Address:</div>
@@ -17,19 +17,19 @@
 	</div>
 	<div class="contact-block">
 		<div class="twitter-label">Twitter:</div>
-		<div class="twitter">@HansonWen</div>
+		<div class="twitter"><a href="https://twitter.com/HansonWen" target="_blank">@HansonWen</a></div>
 	</div>
 	<div class="contact-block">
 		<div class="facebook-label">Facebook:</div>
-		<div class="facebook">HansonandWen</div>
+		<div class="facebook"><a href="https://www.facebook.com/HansonandWen" target="_blank">HansonandWen</a></div>
 	</div>
 	<div class="contact-block">
 		<div class="instagram-label">Instagram:</div>
-		<div class="instagram">HansonWen</div>
+		<div class="instagram"><a href="http://instagram.com/hansonwen" target="_blank">HansonWen</a></div>
 	</div>
 	<div class="contact-block">
 		<div class="linkedin-label">LinkedIn:</div>
-		<div class="linkedin">Hanson & Wen</div>
+		<div class="linkedin"><a href="http://www.linkedin.com/company/hanson-&-wen" target="_blank">Hanson & Wen</a></div>
 	</div>
 </div>
 <div id="contact-map" class="right-content">
