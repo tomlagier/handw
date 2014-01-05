@@ -394,6 +394,27 @@ a:hover{
 	background-repeat: no-repeat;
 }
 
+#social-preloads > div{
+	position: absolute;
+	left: -9999px;
+}
+
+.twitter-preload{
+	background-image: url('/img/social/twitter-active.png');
+}
+
+.facebook-preload{
+	background-image: url('/img/social/facebook-active.png');
+}
+
+.instagram-preload{
+	background-image: url('/img/social/instagram-active.png');
+}
+
+.linkedin-preload{
+	background-image: url('/img/social/linkedin-active.png');
+}
+
 #twitter .icon{
 	background-image: url('/img/social/twitter.png');
 }

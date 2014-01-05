@@ -7,6 +7,12 @@
 		<div id="facebook" class="social-icon"><a href="https://www.facebook.com/HansonandWen" target="_blank"><div class="icon"></div></a></div>
 		<div id="linkedin" class="social-icon"><a href="http://www.linkedin.com/company/hanson-&-wen" target="_blank"><div class="icon"></div></a></div>
 	</div>
+	<div id="social-preloads">
+		<div class="twitter-preload"></div>
+		<div class="facebook-preload"></div>
+		<div class="linkedin-preload"></div>
+		<div class="instagram-preload"></div>
+	</div>
 @include('home.main-nav')
 </div>
 <!-- For Portfolio page navigation -->
