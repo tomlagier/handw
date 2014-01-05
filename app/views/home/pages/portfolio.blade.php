@@ -119,6 +119,7 @@
        <div class="item">
           <img src="http://placehold.it/900x900" alt="Placeholder">
        </div>
+     </div>
 
     <!-- Controls -->
     <a class="left carousel-control" href="#packaging" data-slide="prev">
@@ -127,7 +128,6 @@
     <a class="right carousel-control" href="#packaging" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
-     </div>
   
   </div>
 
@@ -178,6 +178,8 @@
             <div class="item">
         <img src="http://placehold.it/900x900" alt="Placeholder">
         </div>
+      </div>
+
     <!-- Controls -->
     <a class="left carousel-control" href="#branding" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
@@ -185,8 +187,6 @@
     <a class="right carousel-control" href="#branding" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
-      </div>
-
 
   </div>
 
@@ -237,6 +237,8 @@
       <div class="item">
         <img src="http://placehold.it/900x900" alt="Placeholder">
       </div>
+    </div>
+
     <!-- Controls -->
     <a class="left carousel-control" href="#clients" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
@@ -244,8 +246,6 @@
     <a class="right carousel-control" href="#clients" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
-    </div>
-
 
   </div>
 </div>

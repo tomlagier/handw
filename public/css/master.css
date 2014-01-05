@@ -381,7 +381,40 @@ img{
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background: #999;
+	background-size:100%;
+	background-repeat: no-repeat;
+}
+
+#twitter .icon{
+	background-image: url('/img/social/twitter.png');
+}
+
+#instagram .icon{
+	background-image: url('/img/social/instagram.png');
+}
+
+#facebook .icon{
+	background-image: url('/img/social/facebook.png');
+}
+
+#linkedin .icon{
+	background-image: url('/img/social/linkedin.png');
+}
+
+#twitter:hover .icon{
+	background-image: url('/img/social/twitter-active.png');
+}
+
+#instagram:hover .icon{
+	background-image: url('/img/social/instagram-active.png');
+}
+
+#facebook:hover .icon{
+	background-image: url('/img/social/facebook-active.png');
+}
+
+#linkedin:hover .icon{
+	background-image: url('/img/social/linkedin-active.png');
 }
 
 .social-icon:hover{
@@ -728,6 +761,12 @@ img{
 #blog-nav-menu{
 	margin: 0;
 	list-style-type: none;
+	padding: 0;
+}
+
+.blog-nav-item{
+	color: #999;
+	text-transform: uppercase;
 }
 
 .blog-nav-item.active{
