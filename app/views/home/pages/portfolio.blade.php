@@ -20,9 +20,24 @@
 
   <!-- Indicators -->
   <ol class="carousel-indicators left-content primary">
-    <li data-target="#alcohol" data-slide-to="0" class="active"></li>
-    <li data-target="#alcohol" data-slide-to="1"></li>
-    <li data-target="#alcohol" data-slide-to="2"></li>
+    <li data-target="#alcohol" data-slide-to="0" class="active">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
+    <li data-target="#alcohol" data-slide-to="1">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
+    <li data-target="#alcohol" data-slide-to="2">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
   </ol>
 
   <!-- Secondary Indicators -->
@@ -37,29 +52,25 @@
     <div class="slide-wrapper">
       <div class="item active">
         <img src="http://placehold.it/900x900" alt="Placeholder">
-        <div class="carousel-caption">
-        </div>
       </div>
       <div class="item">
         <img src="http://placehold.it/900x900" alt="Placeholder">
-        <div class="carousel-caption">
-        </div>
       </div>
       <div class="item">
         <img src="http://placehold.it/900x900" alt="Placeholder">
-        <div class="carousel-caption">
-        </div>
       </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#alcohol" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#alcohol" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
     </div>
+    
   </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#alcohol" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#alcohol" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
 
 </div>
 <!-- End alcohol carousel -->
@@ -69,9 +80,24 @@
 
   <!-- Indicators -->
   <ol class="carousel-indicators left-content primary">
-    <li data-target="#packaging" data-slide-to="0" class="active"></li>
-    <li data-target="#packaging" data-slide-to="1"></li>
-    <li data-target="#packaging" data-slide-to="2"></li>
+    <li data-target="#packaging" data-slide-to="0" class="active">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
+    <li data-target="#packaging" data-slide-to="1">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
+    <li data-target="#packaging" data-slide-to="2">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
   </ol>
 
   <!-- Secondary Indicators -->
@@ -86,29 +112,24 @@
      <div class="slide-wrapper">
         <div class="item active">
          <img src="http://placehold.it/900x900" alt="Placeholder">
-         <div class="carousel-caption">
-         </div>
        </div>
-           <div class="item">
-       <img src="http://placehold.it/900x900" alt="Placeholder">
-       <div class="carousel-caption">
+       <div class="item">
+          <img src="http://placehold.it/900x900" alt="Placeholder">
        </div>
-           </div>
-           <div class="item">
-       <img src="http://placehold.it/900x900" alt="Placeholder">
-       <div class="carousel-caption">
+       <div class="item">
+          <img src="http://placehold.it/900x900" alt="Placeholder">
        </div>
-           </div>
-     </div>
-  </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#packaging" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#packaging" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#packaging" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#packaging" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+     </div>
+  
+  </div>
 
 </div>
 <!-- End packaging carousel -->
@@ -118,9 +139,24 @@
 
   <!-- Indicators -->
   <ol class="carousel-indicators left-content primary">
-    <li data-target="#branding" data-slide-to="0" class="active"></li>
-    <li data-target="#branding" data-slide-to="1"></li>
-    <li data-target="#branding" data-slide-to="2"></li>
+    <li data-target="#branding" data-slide-to="0" class="active">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
+    <li data-target="#branding" data-slide-to="1">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
+    <li data-target="#branding" data-slide-to="2">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
   </ol>
 
 <!-- Secondary Indicators -->
@@ -135,29 +171,24 @@
       <div class="slide-wrapper">
         <div class="item active">
           <img src="http://placehold.it/900x900" alt="Placeholder">
-          <div class="carousel-caption">
-          </div>
         </div>
             <div class="item">
         <img src="http://placehold.it/900x900" alt="Placeholder">
-        <div class="carousel-caption">
-        </div>
             </div>
             <div class="item">
         <img src="http://placehold.it/900x900" alt="Placeholder">
-        <div class="carousel-caption">
         </div>
-        </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#branding" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#branding" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
       </div>
-  </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#branding" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#branding" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
+
+  </div>
 
 </div>
 <!-- End branding carousel -->
@@ -167,9 +198,24 @@
 
   <!-- Indicators -->
   <ol class="carousel-indicators left-content primary">
-    <li data-target="#clients" data-slide-to="0" class="active"></li>
-    <li data-target="#clients" data-slide-to="1"></li>
-    <li data-target="#clients" data-slide-to="2"></li>
+    <li data-target="#clients" data-slide-to="0" class="active">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
+    <li data-target="#clients" data-slide-to="1">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
+    <li data-target="#clients" data-slide-to="2">
+      <div class="portfolio-thumb-wrapper">
+      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
+        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Lorem Ip</div></div>
+      </div>
+    </li>
   </ol>
 
   <!-- Secondary Indicators -->
@@ -184,29 +230,24 @@
     <div class="slide-wrapper">
       <div class="item active">
         <img src="http://placehold.it/900x900" alt="Placeholder">
-        <div class="carousel-caption">
-        </div>
       </div>
       <div class="item">
         <img src="http://placehold.it/900x900" alt="Placeholder">
-        <div class="carousel-caption">
-        </div>
       </div>
       <div class="item">
         <img src="http://placehold.it/900x900" alt="Placeholder">
-        <div class="carousel-caption">
-        </div>
       </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#clients" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#clients" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
     </div>
-  </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#clients" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#clients" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
+
+  </div>
 </div>
 <!-- End clients carousel -->
 <!-- End portfolio page -->

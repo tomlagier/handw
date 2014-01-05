@@ -446,6 +446,7 @@ img{
 	height: 100%;
 	font-size: 0;
 	position: relative;
+	overflow: hidden;
 }
 
 /* Overload Bootstrap carousel CSS to allow for correct slide sizing */
@@ -516,8 +517,41 @@ img{
 	margin: 0;
 }
 
-.portfolio-carousel .carousel-control{
-	width: 5%;
+.portfolio-carousel .portfolio-thumb-wrapper{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.portfolio-carousel .portfolio-thumb-wrapper img{
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-carousel .portfolio-thumb-caption{
+	position: absolute;
+	bottom: 0;
+	display: table;
+	height: 18%;
+	width: 100%;
+	width: calc(100% + 1px);
+	width: -webkit-calc(100% + 1px);
+	padding: 0 0 0 10px;
+	background: #999;
+	color: #666;
+	text-transform: uppercase;
+	line-height: initial;
+}
+
+.portfolio-thumb-caption > .caption-wrapper{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.portfolio-carousel .active .portfolio-thumb-caption{
+	color: white;
 }
 
 /* Portfolio navigation */

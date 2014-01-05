@@ -79,3 +79,5 @@ var setupSecondaryNav = function(){
       targetNav.addClass('active');
     });
 }();
+
+$('#portfolio .portfolio-thumb-caption').css('font-size', $('#main-nav .nav-item').css('font-size'));
