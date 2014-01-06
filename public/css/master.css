@@ -44,7 +44,7 @@
 
 /* Font scaling */
 
-#team .scale-target, #services .scale-target{
+#team .scale-target, #services .scale-target, #contact .scale-target{
 	opacity: 0;
 }
 
@@ -839,8 +839,13 @@ a:hover{
 	margin: 10px 0;
 }
 
-#contact-map{
-	padding-right: 110px;
+.contact-block:first-child{
+	margin: 0 0 10px 0;
+}
+
+#contact-content-wrapper, #stupid-second-content-wrapper{
+	width: 100%;
+	height: 100%;
 }
 
 /* Footer styles */

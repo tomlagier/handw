@@ -128,8 +128,8 @@ $.fn.scaleContents = function(){
 	var items = this.children();
 
 	var target = this.find('.scale-target');
-	target.right = target.offset().left + target.width();
-	target.bottom = target.offset().top + target.height();
+	target.right = target.offset().left + target.width() - 1;
+	target.bottom = target.offset().top + target.height() - 1;
 
 	var parent = this.parent();
 	parent.right= parent.offset().left + parent.outerWidth();
