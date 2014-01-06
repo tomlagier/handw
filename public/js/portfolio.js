@@ -1,12 +1,13 @@
-  setTimeout(function(){
-    $('#portfolio').waypoint({
-      handler: function(){
-        setupPortfolioNav();
-      },
-      offset: 0,
-      triggerOnce: true
-    });
-  }, 800);
+setTimeout(function(){
+
+  $('#portfolio').waypoint({
+    handler: function(){
+      setupPortfolioNav();
+    },
+    offset: 0,
+    triggerOnce: true
+  });
+}, 0);
 
   var toggleState = function(){
     setTimeout(function(){
@@ -41,7 +42,9 @@
     toggleState();
 
     setTimeout(function(){
-      $('#portfolio-nav').css('opacity', '1');
+      if($('#portfolio-nav').attr('data-active') === 'true'){
+        $('#portfolio-nav').css('opacity', '1');
+      }
     }, 0);
     
     $(window).on('scroll', toggleState);

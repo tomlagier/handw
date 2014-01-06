@@ -11,7 +11,7 @@
 	<div id="team-bios-upper">
 	<div class="team-bio">
 		<div class="upper-content">
-			<div class="image"><img src="http://placehold.it/100x100" alt="" class="team-thumb"></div>
+			<img src="http://placehold.it/100x100" alt="" class="team-thumb">
 			<div class="name">Mike Ball</div>
 			<div class="title">Creative Director</div>
 			<div class="location">Los Angeles</div>
@@ -30,7 +30,7 @@
 	</div>
 	<div class="team-bio">
 		<div class="upper-content">
-			<div class="image"><img src="http://placehold.it/100x100" alt="" class="team-thumb"></div>
+			<img src="http://placehold.it/100x100" alt="" class="team-thumb">
 			<div class="name">Somany Koeung</div>
 			<div class="title">Accounts Director</div>
 			<div class="location">Los Angeles</div>
@@ -51,7 +51,7 @@
 	<div id="team-bios-lower">
 	<div class="team-bio">
 		<div class="upper-content">
-			<div class="image"><img src="http://placehold.it/100x100" alt="" class="team-thumb"></div>
+			<img src="http://placehold.it/100x100" alt="" class="team-thumb">
 			<div class="name">Scott Macdonald</div>
 			<div class="title">New Business Development</div>
 			<div class="location">New York</div>
@@ -67,7 +67,7 @@
 	</div>
 	<div class="team-bio">
 		<div class="upper-content">
-			<div class="image"><img src="http://placehold.it/100x100" alt="" class="team-thumb"></div>
+			<img src="http://placehold.it/100x100" alt="" class="team-thumb">
 			<div class="name">Team</div>
 		</div>
 		<div class="lower-content">

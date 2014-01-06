@@ -636,7 +636,7 @@ a:hover{
 	bottom: 10px;
 	left: 0;
 	padding-left: 18px;
-	width: 50%;
+	width: 55%;
 }
 
 @media screen and (max-width: 900px){	
@@ -743,6 +743,7 @@ a:hover{
 
 .team-image{
 	width: 50%;
+	height: 50%;
 	display: inline-block;
 }
 
@@ -754,11 +755,11 @@ a:hover{
 }
 
 #team-bios-upper .team-bio{
-	padding-bottom: 10px;	
+	padding-bottom: 20px;	
 }
 
 #team-bios-lower .team-bio{
-	padding-top: 10px;	
+	padding-top: 20px;	
 }
 
 .team-bio{
@@ -771,13 +772,29 @@ a:hover{
 
 .team-green-line{
 	width: 80%;
-	height: 3px;
+	height: 1px;
 	position:absolute;
 	background: #669933;
 }
 
 .team-thumb{
 	float: left;
+	width: 85px;
+	height: 85px;
+	margin: 0 12px 12px 0;
+}
+
+.team-bio .name{
+	text-transform: uppercase;
+	padding: 10px 0 0 0;
+}
+
+.team-bio .name, .team-bio .title, .team-bio .location{
+	margin: 0 0 6px 0;
+}
+
+.team-bio .quote{
+	padding: 0 20px 20px 0;
 }
 
 .team-bio .lower-content{
