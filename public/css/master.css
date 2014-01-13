@@ -258,7 +258,7 @@ a:hover{
 	position: fixed;
 	bottom: 40px;
 	right: 40px;
-	z-index: 10;
+	z-index: 11;
 }
 
 #side-nav ul{
@@ -485,6 +485,20 @@ a:hover{
 	left: auto;
 	text-align: right;
 	margin-right: 125px;
+}
+
+#home.carousel-control{
+	z-index: 11;
+}
+
+#home .carousel-indicators{
+	z-index: 11;
+}
+
+#home .carousel-inner{
+	position: absolute;
+	top: 0;
+	z-index: 10;
 }
 
 /* Portfolio page styles */
