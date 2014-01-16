@@ -23,5 +23,5 @@ $('.blog-nav-item').on('click', function(){
 
 $('.blog-nav-item').css({
 						'font-size' : $('#main-nav .nav-item').css('font-size'),
-						'line-height' : $('#main-nav .nav-item').css('font-size')
+						'line-height' : $('#main-nav .nav-item').css('line-height')
 						});
