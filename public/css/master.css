@@ -59,6 +59,7 @@
 body{
 	height: 7000px;
 	width: 100%;
+	max-width: 1600px;
 	-moz-transition:top .5s;
     -webkit-transition:top .5s;
     -o-transition:top .5s;
@@ -66,8 +67,9 @@ body{
 	font-family: 'Gibson', sans-serif;
     background: black;
     color: white;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 auto;
 }
 
 img{
@@ -94,7 +96,8 @@ img{
 }
 
 .right-content > *, .left-content > * {
-	font-size: 18px;
+	font-size: 16px;
+	line-height: 20px;
 }
 
 *{
@@ -103,11 +106,27 @@ img{
 
 a{
 	color: white;
+	text-decoration: underline;
 }
 
 a:hover{
-	text-decoration: none;
 	color: #669933;
+}
+
+.window-green-line{
+	position: fixed;
+	width: 100%;
+	height: 2px;
+	background: #669933;
+	z-index: 11;
+}
+
+.window-green-line.top{
+	top: 0;
+}
+
+.window-green-line.bottom{
+	bottom: 0;
 }
 
 /* General Page styles */
@@ -311,6 +330,7 @@ a:hover{
 	height: 155px;
 	box-shadow: 0 0 30px black;
 	font-size: 0;
+	max-width: 1600px;
 }
 
 /* Logo, social icons, and main menu */
@@ -382,7 +402,7 @@ a:hover{
 	display: inline-block;
 	width: 12%;
 	height: 12%;
-	margin: 0 4%;
+	margin: 0 1.5%;
 	padding-bottom: 12%; 
 }
 
@@ -858,6 +878,7 @@ a:hover{
 	padding: 20px 65px;
 	/*background: black;*/
 	font-size: .8em;
+	max-width: 1600px;
 	/*box-shadow: 0 0 30px black;*/
 }
 

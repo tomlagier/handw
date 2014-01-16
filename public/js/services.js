@@ -7,4 +7,7 @@ $('.services-nav-item').on('click', function(){
 	$(this).addClass('active');
 });
 
-$('#services-nav > ol').css('font-size', $('#main-nav .nav-item').css('font-size'));
+$('#services-nav > ol').css({
+							'font-size' : $('#main-nav .nav-item').css('font-size'),
+							'line-height' : $('#main-nav .nav-item').css('line-height')
+							});
