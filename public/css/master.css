@@ -228,6 +228,7 @@ a:hover{
     width: 100%;
     height: 100%;
     font-size: 18px;
+    line-height: 22px;
 }
 
 #main-nav .stretch, #portfolio-nav .stretch{
