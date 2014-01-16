@@ -515,10 +515,14 @@ a:hover{
 	z-index: 11;
 }
 
+#home-carousel{
+	z-index: 10;
+	opacity: 0;
+}
+
 #home .carousel-inner{
 	position: absolute;
 	top: 0;
-	z-index: 10;
 }
 
 /* Portfolio page styles */
