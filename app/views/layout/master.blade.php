@@ -7,6 +7,7 @@
 		 <div id="header">
 		 	@yield('header')
 		 </div>
+		 @include('home.side-nav')
 		 <div id="content">
 		 	@yield('content')
 		 </div>

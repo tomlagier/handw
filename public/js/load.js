@@ -125,6 +125,7 @@ $.fn.scaleText = function() {
 
 
 $.fn.scaleContents = function(){
+
 	var items = this.children();
 
 	var target = this.find('.scale-target');

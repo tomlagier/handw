@@ -18,6 +18,4 @@
 <!-- For Portfolio page navigation -->
 <div class="right-nav-block fadein">
 </div>
-
-@include('home.side-nav')
 <!-- End header content -->
