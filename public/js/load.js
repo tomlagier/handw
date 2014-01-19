@@ -32,15 +32,26 @@ function bindWaypoints(){
 
 }
 
+//Need to make sure that when the page is greater than 1600px wide, the height doesn't get all fucked up.
+//Target proportion width:height is 2:1
+function setHeights(){
+	if($(window).width() > 1600 && $(window).height > 800){
+		$('.page').height(800);
+		var marginTopBot = ($(window).height() - 800) / 2;
+		$('.page').css('margin', marginTopBot + 'px 0');
+	} else {
+		$('.page').height($(window).height());
+	    $('body').height($('.page').height() * 6 - 75);
+	}
+}
+
 $(document).ready(function(){
-	$('.page').height($(window).height());
-    $('body').height($('.page').height() * 6 - 75);
+	setHeights();
 });
 
 //Set individual page height to window height, then (re)bind waypoints
 $(window).on('load resize', function(){
-    $('.page').height($(window).height());
-    $('body').height($('.page').height() * 6 - 75);
+    setHeights();
     $('.page').waypoint('destroy');
     bindWaypoints();
 
@@ -118,7 +129,8 @@ $.fn.scaleText = function() {
       var fontstep = 2;
       if (this.height()>this.parent().height() || this.width()>this.parent().width()) {
       	var targetFontSize = parseInt(this.css('font-size').match(/^\d*/)) - fontstep;
-        this.css('font-size',targetFontSize + 'px').css('line-height', targetFontSize + 'px');
+      	var targetLineHeight = targetFontSize + 4;
+        this.css('font-size',targetFontSize + 'px').css('line-height', targetLineHeight + 'px');
         this.scaleText();
       }
     }
@@ -139,7 +151,8 @@ $.fn.scaleContents = function(){
 	var fontstep = 2;
 	if( target.right > parent.right || target.bottom > parent.bottom){
 		var targetFontSize = parseInt(target.css('font-size').match(/^\d*/)) - fontstep;
-		items.css('font-size',targetFontSize + 'px').css('line-height', targetFontSize + 'px');
+		var targetLineHeight = targetFontSize + 4;
+		items.css('font-size',targetFontSize + 'px').css('line-height', targetLineHeight + 'px');
         this.scaleContents();
 	}
 }

@@ -9,7 +9,7 @@ We've brought together an exciting, experienced team of energetic professionals 
 </div>
 <!-- End text content -->
 <!-- Begin carousel -->
-<div id="home-carousel" class="carousel slide right-content" data-ride="carousel">
+<div id="home-carousel" class="carousel slide right-content fadein" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
@@ -44,5 +44,11 @@ We've brought together an exciting, experienced team of energetic professionals 
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
 </div>
+
+<script>
+  setTimeout(function(){
+    $('#home-carousel').css('opacity', '1');
+  }, 950);
+</script>
 <!-- End carousel -->
 <!-- End home page --> 

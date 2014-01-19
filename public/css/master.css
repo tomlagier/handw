@@ -32,11 +32,11 @@
 
 @font-face {
     font-family: 'Gibson';
-    src: url('/fonts/gibson-light-webfont.eot');
-    src: url('/fonts/gibson-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/gibson-light-webfont.woff') format('woff'),
-         url('/fonts/gibson-light-webfont.ttf') format('truetype'),
-         url('/fonts/gibson-light-webfont.svg#Gibson') format('svg');
+    src: url('/fonts/gibson-regular-webfont.eot');
+    src: url('/fonts/gibson-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/gibson-regular-webfont.woff') format('woff'),
+         url('/fonts/gibson-regular-webfont.ttf') format('truetype'),
+         url('/fonts/gibson-regular-webfont.svg#Gibson') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -45,124 +45,143 @@
 /* Font scaling */
 
 #team .scale-target, #services .scale-target, #contact .scale-target{
-	opacity: 0;
+        opacity: 0;
 }
 
 .scale-target{
-	display: inline-block;
-	float: right;
+        display: inline-block;
+        float: right;
 }
 
 /* General styles */
 
 
 body{
-	height: 7000px;
-	width: 100%;
-	-moz-transition:top .5s;
+        height: 7000px;
+        width: 100%;
+        max-width: 1600px;
+        -moz-transition:top .5s;
     -webkit-transition:top .5s;
     -o-transition:top .5s;
     transition:top .5s;
-	font-family: 'Gibson', sans-serif;
+        font-family: 'Gibson', sans-serif;
     background: black;
     color: white;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 auto;
 }
 
 img{
-	max-width: 100%;
-	max-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
 }
 
 .right-content{
-	width: 60%;
-	font-size: 0;
-	position: relative;
-	float: right;
-	height: 100%;
-	padding: 180px 65px 65px 32px;
+        width: 60%;
+        font-size: 0;
+        position: relative;
+        float: right;
+        height: 100%;
+        padding: 180px 65px 65px 32px;
 }
 
 .left-content{
-	font-size: 0;
-	position: relative;
-	float: left;
-	width: 40%;
-	height:100%;
-	padding: 180px 28px 65px 65px;
+        font-size: 0;
+        position: relative;
+        float: left;
+        width: 40%;
+        height:100%;
+        padding: 180px 28px 65px 65px;
 }
 
 .right-content > *, .left-content > * {
-	font-size: 18px;
+        font-size: 16px;
+        line-height: 20px;
 }
 
 *{
-	box-sizing: border-box;
+        box-sizing: border-box;
 }
 
 a{
-	color: white;
+        color: white;
+        text-decoration: underline;
 }
 
 a:hover{
-	text-decoration: none;
-	color: #669933;
+        color: #669933;
+}
+
+.window-green-line{
+        position: fixed;
+        width: 100%;
+        height: 2px;
+        background: #669933;
+        z-index: 11;
+}
+
+.window-green-line.top{
+        top: 0;
+}
+
+.window-green-line.bottom{
+        bottom: 0;
 }
 
 /* General Page styles */
 
 .page{
-	height: 1000px;
-	width: 100%;
-	position: relative;
+        height: 1000px;
+        width: 100%;
+        position: relative;
 }
 
 .page-contents{
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
 }
 
 .fadein{
-	-moz-transition:opacity .8s;
+        -moz-transition:opacity .8s;
     -webkit-transition:opacity .8s;
     -o-transition:opacity .8s;
     transition:opacity .8s;
 }
 
 .fadein-fast{
-	-moz-transition:opacity .4s;
+        -moz-transition:opacity .4s;
     -webkit-transition:opacity .4s;
     -o-transition:opacity .4s;
     transition:opacity .4s;
 }
 
 .fadein.visible{
-	opacity: 1;
+        opacity: 1;
 }
 
 .loader{
-	width: 100%;
-	height: 100%;
-	background: black;
-	position: relative;
+        width: 100%;
+        height: 100%;
+        background: black;
+        position: relative;
 }
 
 .loader .spinner{
-	position: absolute;
-	top: 50%;
-	margin-top: -64px;
-	left: 50%;
-	margin-left: -64px;
+        position: absolute;
+        top: 50%;
+        margin-top: -64px;
+        left: 50%;
+        margin-left: -64px;
 }
 
 
 .column-2{
-	-webkit-column-count: 2;
+        -webkit-column-count: 2;
     -webkit-column-gap: 20px;
     -moz-column-count: 2;
     -moz-column-gap: 20px;
@@ -171,7 +190,7 @@ a:hover{
 }
 
 .column-2 p:first-child, .column-2 ol, .column-2 li:first-child{
-	margin-top: 0;
+        margin-top: 0;
 }
 
 
@@ -180,8 +199,8 @@ a:hover{
 /* General navigation styles */
 
 .nav-item:hover{
-	cursor: pointer;
-	color: white;
+        cursor: pointer;
+        color: white;
 }
 
 /* Main navigation styles */
@@ -189,26 +208,27 @@ a:hover{
 /*Horizontal distribution from http://stackoverflow.com/questions/6865194/fluid-width-with-equally-spaced-divs/6880421#6880421 */
 
 #main-nav{
-	height: 25%;
-	width: 100%;
-	position: absolute;
-	bottom: 10px;
-	padding: 0 40px 0 0;
-	padding: 0 -webkit-calc(2% + 32px) 0 0;
-	padding: 0 -moz-calc(2% + 32px) 0 0;
-	padding: 0 -ms-calc(2% + 32px) 0 0;
-	padding: 0 -o-calc(2% + 32px) 0 0;
-	padding: 0 calc(2% + 32px) 0 0;
+        height: 25%;
+        width: 100%;
+        position: absolute;
+        bottom: 10px;
+        padding: 0 40px 0 0;
+        padding: 0 -webkit-calc(2% + 32px) 0 0;
+        padding: 0 -moz-calc(2% + 32px) 0 0;
+        padding: 0 -ms-calc(2% + 32px) 0 0;
+        padding: 0 -o-calc(2% + 32px) 0 0;
+        padding: 0 calc(2% + 32px) 0 0;
 
 }
 
 #main-nav .nav-wrapper, #portfolio-nav .nav-wrapper{
-	text-align: justify;
+        text-align: justify;
     -ms-text-justify: distribute-all-lines;
     text-justify: distribute-all-lines;
     width: 100%;
     height: 100%;
     font-size: 18px;
+    line-height: 22px;
 }
 
 #main-nav .stretch, #portfolio-nav .stretch{
@@ -219,35 +239,35 @@ a:hover{
 }
 
 #main-nav .nav-item{
-	text-transform: uppercase;
-	margin: 0;
-	color: #999;
-	display: inline-block;
-	*display:inline;
-	zoom: 1;
-	vertical-align:top;
+        text-transform: uppercase;
+        margin: 0;
+        color: #999;
+        display: inline-block;
+        *display:inline;
+        zoom: 1;
+        vertical-align:top;
 }
 
 #main-nav .scale-target{
-	*display: inline;
-	zoom: 1;
-	vertical-align: top;
+        *display: inline;
+        zoom: 1;
+        vertical-align: top;
 }
 
 #main-nav .spacer, #portfolio-nav .spacer{
-	color: #999;
-	display: inline-block;
-	*display:inline;
-	zoom: 1;
-	vertical-align:top;
+        color: #999;
+        display: inline-block;
+        *display:inline;
+        zoom: 1;
+        vertical-align:top;
 }
 
 #main-nav .nav-item.active{
-	color: white;
+        color: white;
 }
 
 #main-nav .nav-item:hover{
-	color: #669933;
+        color: #669933;
 }
 
 
@@ -255,25 +275,25 @@ a:hover{
 /* Side navigation styles */
 
 #side-nav{
-	position: fixed;
-	bottom: 40px;
-	right: 40px;
-	z-index: 13;
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        z-index: 11;
 }
 
 #side-nav ul{
-	font-size: 0;
+        font-size: 0;
 }
 
 #side-nav .nav-item{
-	height: 10px;
-	width: 10px;
-	background: white;
-	margin: 5px;
+        height: 10px;
+        width: 10px;
+        background: white;
+        margin: 5px;
 }
 
 #side-nav .nav-item.active{
-	background: #669933;
+        background: #669933;
 }
 
 
@@ -281,62 +301,79 @@ a:hover{
 
 
 #portfolio-subnav{
-	padding: 0px;
-	display: none;
-	position: absolute;
-	margin: 0px;
-	background: black;
-	box-shadow: 0 12px 31px 6px rgba(0,0,0,.8);
-	border-radius:  0 0 3px 3px;
+        padding: 0px;
+        display: none;
+        position: absolute;
+        margin: 0px;
+        background: black;
+        box-shadow: 0 12px 31px 6px rgba(0,0,0,.8);
+        border-radius:  0 0 3px 3px;
 }
 
 #portfolio-subnav .nav-item{
-	display: block;
-	padding: 0;
-	border: 0;
-	margin: 5px;
+        display: block;
+        padding: 0;
+        border: 0;
+        margin: 5px;
+}
+
+/* Header styles */
+
+#header{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        padding: 65px 65px 0 65px;
+        background: black;
+        z-index: 10;
+        width: 100%;
+        color: white;
+        height: 155px;
+        box-shadow: 0 0 30px black;
+        font-size: 0;
+        max-width: 1600px;
 }
 
 /* Logo, social icons, and main menu */
 
 .left-nav-block{
-	width: 40%;
-	height: 100%;
-	font-size: 18px;
-	float: left;
-	position: relative;
-	opacity: 0;
+        width: 40%;
+        height: 100%;
+        font-size: 18px;
+        float: left;
+        position: relative;
+        opacity: 0;
 }
 
 .right-nav-block{
-	position: relative;
-	right: 0;
-	width: 60%;
-	font-size: 18px;
-	float: right;
-	height: 100%;
+        position: relative;
+        right: 0;
+        width: 60%;
+        font-size: 18px;
+        float: right;
+        height: 100%;
 }
 
 @media screen and (max-width: 900px){
-	.left-nav-block{
-		width: 100%;
-	}
+        .left-nav-block{
+                width: 100%;
+        }
 
-	.right-nav-block{
-		width: 100%;
-	}
+        .right-nav-block{
+                width: 100%;
+        }
 
-	#main-nav{
-		padding-right: 0;
-	}
+        #main-nav{
+                padding-right: 0;
+        }
 }
 
 /* Logo */
 
 #logo{
-	float: left;
-	width: 50%;
-	height: 50%;
+        float: left;
+        width: 50%;
+        height: 50%;
 }
 
 
@@ -345,169 +382,173 @@ a:hover{
 /*Square hack from http://stackoverflow.com/questions/11243075/css-scale-height-to-match-width-possibly-with-a-formfactor */
 
 #social{
-	float: right;
-	font-size: 0;
-	width: 50%;
-	height: 50%;
-	font-size: 0;
-	padding-right: 32px;
+        float: right;
+        font-size: 0;
+        width: 50%;
+        height: 50%;
+        font-size: 0;
+        padding-right: 32px;
 }
 
 @media screen and (max-width: 900px){
-	#social{
-		padding-right: 0;
-		margin-right: -2.5%;
-	}
+        #social{
+                padding-right: 0;
+                margin-right: -2.5%;
+        }
 }
 
 .social-icon{
-	float: right;
-	position: relative;
-	display: inline-block;
-	width: 12%;
-	height: 12%;
-	margin: 0 4%;
-	padding-bottom: 12%; 
+        float: right;
+        position: relative;
+        display: inline-block;
+        width: 12%;
+        height: 12%;
+        margin: 0 1.5%;
+        padding-bottom: 12%; 
 }
 
 .social-icon .icon{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background-size:100%;
-	background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-size:100%;
+        background-repeat: no-repeat;
 }
 
 #social-preloads > div{
-	position: absolute;
-	left: -9999px;
+        position: absolute;
+        left: -9999px;
 }
 
 .twitter-preload{
-	background-image: url('/img/social/twitter-active.png');
+        background-image: url('/img/social/twitter-active.png');
 }
 
 .facebook-preload{
-	background-image: url('/img/social/facebook-active.png');
+        background-image: url('/img/social/facebook-active.png');
 }
 
 .instagram-preload{
-	background-image: url('/img/social/instagram-active.png');
+        background-image: url('/img/social/instagram-active.png');
 }
 
 .linkedin-preload{
-	background-image: url('/img/social/linkedin-active.png');
+        background-image: url('/img/social/linkedin-active.png');
 }
 
 #twitter .icon{
-	background-image: url('/img/social/twitter.png');
+        background-image: url('/img/social/twitter.png');
 }
 
 #instagram .icon{
-	background-image: url('/img/social/instagram.png');
+        background-image: url('/img/social/instagram.png');
 }
 
 #facebook .icon{
-	background-image: url('/img/social/facebook.png');
+        background-image: url('/img/social/facebook.png');
 }
 
 #linkedin .icon{
-	background-image: url('/img/social/linkedin.png');
+        background-image: url('/img/social/linkedin.png');
 }
 
 #twitter:hover .icon{
-	background-image: url('/img/social/twitter-active.png');
+        background-image: url('/img/social/twitter-active.png');
 }
 
 #instagram:hover .icon{
-	background-image: url('/img/social/instagram-active.png');
+        background-image: url('/img/social/instagram-active.png');
 }
 
 #facebook:hover .icon{
-	background-image: url('/img/social/facebook-active.png');
+        background-image: url('/img/social/facebook-active.png');
 }
 
 #linkedin:hover .icon{
-	background-image: url('/img/social/linkedin-active.png');
+        background-image: url('/img/social/linkedin-active.png');
 }
 
 .social-icon:hover{
-	cursor: pointer;
+        cursor: pointer;
 }
 
 /* Carousel styles */
 
 .carousel-inner{
-	height: 100%;
+        height: 100%;
 }
 
 .carousel-inner .item{
-	max-height: 100%;
+        max-height: 100%;
 }
 
 .carousel-indicators{
-	z-index: 9;
+        z-index: 9;
 }
 
 .carousel-indicators li{
-	border: none;
-	border-radius: 0;
-	background: white;
+        border: none;
+        border-radius: 0;
+        background: white;
 }
 
 .carousel-indicators li.active{
-	background: #669933;
-	width: 10px;
-	height: 10px;
-	margin: 1px;
+        background: #669933;
+        width: 10px;
+        height: 10px;
+        margin: 1px;
 }
 
 /*Home page styles */
 
 #home .carousel-indicators, #portfolio .secondary.carousel-indicators{
-	right: 0;
-	left: auto;
-	text-align: right;
-	margin-right: 125px;
+        right: 0;
+        left: auto;
+        text-align: right;
+        margin-right: 125px;
 }
 
-#home .carousel-control{
-	z-index: 12;
+#home.carousel-control{
+        z-index: 11;
 }
 
 #home .carousel-indicators{
-	z-index: 12;
+        z-index: 11;
+}
+
+#home-carousel{
+        z-index: 10;
+        opacity: 0;
 }
 
 #home .carousel-inner{
-	position: absolute;
-	top: 0;
-	z-index: 11;
+        position: absolute;
+        top: 0;
 }
 
 /* Portfolio page styles */
 
 .portfolio-carousel{
-	height: 100%;
-	width: 100%;
-	display: none;
+        height: 100%;
+        width: 100%;
+        display: none;
 }
 
 .portfolio-carousel.active{
-	display: block;
+        display: block;
 }
 
 .portfolio-carousel .carousel-inner{
-	right: auto;
-	white-space: nowrap;
+        right: auto;
+        white-space: nowrap;
 }
 
 .portfolio-carousel .slide-wrapper{
-	width: 100%;
-	height: 100%;
-	font-size: 0;
-	position: relative;
-	overflow: hidden;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+        position: relative;
+        overflow: hidden;
 }
 
 /* Overload Bootstrap carousel CSS to allow for correct slide sizing */
@@ -560,326 +601,312 @@ a:hover{
 
 
 .portfolio-carousel .primary.carousel-indicators{
-	margin: 0;
-	text-align: left;
-	left: auto;
-	font-size: 0;
-	line-height: 0;
-	bottom: 0;
+        margin: 0;
+        text-align: left;
+        left: auto;
+        font-size: 0;
+        line-height: 0;
+        bottom: 0;
 }
 
 .portfolio-carousel .primary.carousel-indicators li{
-	width: 50%;
-	height: 50%;
-	z-index: 999;
-	position: relative;
-	text-indent: 0;
-	display: inline-block;
-	margin: 0;
+        width: 50%;
+        height: 50%;
+        z-index: 999;
+        position: relative;
+        text-indent: 0;
+        display: inline-block;
+        margin: 0;
 }
 
 .portfolio-carousel .secondary.carousel-indicators .alternate-active{
-	background: #669933;
-	margin: 1px;
-	width: 10px;
-	height: 10px;
+        background: #669933;
+        margin: 1px;
+        width: 10px;
+        height: 10px;
 }
 
 .portfolio-carousel .portfolio-thumb-wrapper{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
 }
 
 .portfolio-carousel .portfolio-thumb-wrapper img{
-	width: 100%;
-	height: 100%;
+        width: 100%;
+        height: 100%;
 }
 
 .portfolio-carousel .portfolio-thumb-caption{
-	position: absolute;
-	bottom: 0;
-	display: table;
-	height: 18%;
-	width: 100%;
-	padding: 0 0 0 10px;
-	background: #999;
-	color: #666;
-	text-transform: uppercase;
-	line-height: initial;
+        position: absolute;
+        bottom: 0;
+        display: table;
+        height: 18%;
+        width: 100%;
+        padding: 0 0 0 10px;
+        background: #999;
+        color: #666;
+        text-transform: uppercase;
+        line-height: initial;
 }
 
 .portfolio-thumb-caption > .caption-wrapper{
-	display: table-cell;
-	vertical-align: middle;
+        display: table-cell;
+        vertical-align: middle;
 }
 
 .portfolio-carousel .active .portfolio-thumb-caption{
-	color: white;
+        color: white;
 }
 
 #portfolio .carousel-control.right{
-	right: 32px;
+        right: 32px;
 }
 
 /* Portfolio navigation */
 
 
 #portfolio-nav{
-	z-index: 10;
-	opacity: 0;
-	position:absolute;
-	bottom: 10px;
-	left: 0;
-	padding-left: 18px;
-	width: 55%;
+        z-index: 10;
+        opacity: 0;
+        position:absolute;
+        bottom: 10px;
+        left: 0;
+        padding-left: 18px;
+        width: 55%;
 }
 
-@media screen and (max-width: 900px){	
-	#portfolio-nav{
-		top: 10px;
-		padding: 0;
-		margin-left: auto;
-		margin-right: auto;
-		left: 0;
-		right: 0;
-		width: 100%;
-	}
+@media screen and (max-width: 900px){        
+        #portfolio-nav{
+                top: 10px;
+                padding: 0;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                width: 100%;
+        }
 
-	.right-nav-block{
-		text-align: center;
-	}
+        .right-nav-block{
+                text-align: center;
+        }
 }
 
 @media screen and (max-width: 1100px){
-	#portfolio-nav{
-		width: 75%;
-	}
+        #portfolio-nav{
+                width: 75%;
+        }
 }
 
 /*#portfolio-nav.faded{
-	opacity: 1;
+        opacity: 1;
 }*/
 
 .portfolio-nav-item{
-	display: inline-block;
-	text-transform: uppercase;
-	margin: 0;
-	color: #999;
-	display: inline-block;
-	*display:inline;
-	zoom: 1;
-	vertical-align:top;
+        display: inline-block;
+        text-transform: uppercase;
+        margin: 0;
+        color: #999;
+        display: inline-block;
+        *display:inline;
+        zoom: 1;
+        vertical-align:top;
 }
 
 .portfolio-nav-item:hover{
-	cursor: pointer;
-	color: #669933;
+        cursor: pointer;
+        color: #669933;
 }
 
 .portfolio-nav-item.active{
-	color: white;
+        color: white;
 }
 
 /* Services Page styles */
 
 #services-nav > ol{
-	margin: 0;
-	padding: 0 0 0 25px;
+        margin: 0;
+        padding: 0 0 0 25px;
 }
 
 .services-nav-item{
-	text-transform: uppercase;
-	color: #999;
+        text-transform: uppercase;
+        color: #999;
 }
 
 .services-nav-item.active{
-	color: white;
+        color: white;
 }
 
 .services-nav-item:hover{
-	cursor: pointer;
+        cursor: pointer;
 }
 
 
 .services-list{
-	list-style: number;
-	padding: 0 0 0 30px;
+        list-style: number;
+        padding: 0 0 0 20px;
 }
 
 .services-item{
-	margin-bottom: 10px;
-	color: #999;
+        margin-bottom: 10px;
+        color: #999;
 }
 
 .services-item.active{
-	color: white;
-	font-size: 110%;
+        color: white;
+        font-size: 110%;
 }
 
 
 .services-item:last-child{
-	margin-bottom: 0;
+        margin-bottom: 0;
 }
 
 /* Team Page styles */
 
 #team-bios-wrapper{
-	padding-left: 50px;
+        padding-left: 50px;
 }
 
 .team-wrapper{
-	height: 100%;
-	width: 100%;
+        height: 100%;
+        width: 100%;
 }
 
 #team-table-wrapper{
-	display: table;
+        display: table;
 }
 
 .team-image{
-	width: 50%;
-	height: 50%;
-	display: inline-block;
+        width: 50%;
+        height: 50%;
+        display: inline-block;
 }
 
 
 #team-bios-upper, #team-bios-lower{
-	width: 100%;
-	height: 50%;
-	display: table-row;
+        width: 100%;
+        height: 50%;
+        display: table-row;
 }
 
 #team-bios-upper .team-bio{
-	padding-bottom: 20px;	
+        padding-bottom: 20px;        
 }
 
 #team-bios-lower .team-bio{
-	padding-top: 20px;	
+        padding-top: 20px;        
 }
 
 .team-bio{
-	width: 50%;
-	display: table-cell;
-	vertical-align: top;
-	overflow: hidden;
-	margin-right: 6%;
+        width: 50%;
+        display: table-cell;
+        vertical-align: top;
+        overflow: hidden;
+        margin-right: 6%;
 }
 
 .team-green-line{
-	width: 80%;
-	height: 1px;
-	position:absolute;
-	background: #669933;
+        width: 80%;
+        height: 1px;
+        position:absolute;
+        background: #669933;
 }
 
 .team-thumb{
-	float: left;
-	width: 85px;
-	height: 85px;
-	margin: 0 12px 12px 0;
+        float: left;
+        width: 85px;
+        height: 85px;
+        margin: 0 12px 12px 0;
 }
 
 .team-bio .name{
-	text-transform: uppercase;
-	padding: 10px 0 0 0;
+        text-transform: uppercase;
+        padding: 10px 0 0 0;
 }
 
 .team-bio .name, .team-bio .title, .team-bio .location{
-	margin: 0 0 6px 0;
+        margin: 0 0 6px 0;
 }
 
 .team-bio .quote{
-	padding: 0 20px 20px 0;
+        padding: 0 20px 20px 0;
 }
 
 .team-bio .lower-content{
-	clear: both;
+        clear: both;
 }
 
 /* Blog Page styles */
 
 #blog-nav-menu{
-	margin: 0;
-	list-style-type: none;
-	padding: 0;
+        margin: 0;
+        list-style-type: none;
+        padding: 0;
 }
 
 .blog-nav-item{
-	color: #999;
-	text-transform: uppercase;
+        color: #999;
+        text-transform: uppercase;
 }
 
 .blog-nav-item.active{
-	color: white;
+        color: white;
 }
 
 .blog-nav-item:hover{
-	cursor: pointer;
+        cursor: pointer;
 }
 
 #blog-posts{
 }
 
 .blog-post.active{
-	display:block;
+        display:block;
 }
 
 .blog-post{
-	display: none;
+        display: none;
 }
 
 /* Contact page styles */
 
 .contact-block{
-	margin: 10px 0;
+        margin: 10px 0;
 }
 
 .contact-block:first-child{
-	margin: 0 0 10px 0;
+        margin: 0 0 10px 0;
 }
 
 #contact-content-wrapper, #stupid-second-content-wrapper{
-	width: 100%;
-	height: 100%;
+        width: 100%;
+        height: 100%;
 }
 
 /* Footer styles */
 
 #footer{
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	height: 65px;
-	padding: 20px 65px;
-	/*background: black;*/
-	font-size: .8em;
-	/*box-shadow: 0 0 30px black;*/
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        height: 65px;
+        padding: 20px 65px;
+        /*background: black;*/
+        font-size: .8em;
+        max-width: 1600px;
+        z-index: 12;
+        /*box-shadow: 0 0 30px black;*/
 }
 
 #footer a{
-	color: white;
+        color: white;
 }
 
 #footer a:hover{
-	color: #669933;
-	text-decoration: none;
-}
-
-/* Header styles */
-
-#header{
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	padding: 65px 65px 0 65px;
-	background: black;
-	z-index: 10;
-	width: 100%;
-	color: white;
-	height: 155px;
-	box-shadow: 0 0 30px black;
-	font-size: 0;
+        color: #669933;
+        text-decoration: none;
 }
