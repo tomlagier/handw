@@ -32,11 +32,11 @@
 
 @font-face {
     font-family: 'Gibson';
-    src: url('/fonts/gibson-regular-webfont.eot');
-    src: url('/fonts/gibson-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/gibson-regular-webfont.woff') format('woff'),
-         url('/fonts/gibson-regular-webfont.ttf') format('truetype'),
-         url('/fonts/gibson-regular-webfont.svg#Gibson') format('svg');
+    src: url('/fonts/gibson-light-webfont.eot');
+    src: url('/fonts/gibson-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/gibson-light-webfont.woff') format('woff'),
+         url('/fonts/gibson-light-webfont.ttf') format('truetype'),
+         url('/fonts/gibson-light-webfont.svg#Gibson') format('svg');
     font-weight: normal;
     font-style: normal;
 
