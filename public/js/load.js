@@ -37,8 +37,32 @@ function bindWaypoints(){
 function setHeights(){
 	if($(window).width() > 1600 && $(window).height > 800){
 		$('.page').height(800);
-		var marginTopBot = ($(window).height() - 800) / 2;
+		var marginTopBot = parseInt(($(window).height() - 800) / 2);
 		$('.page').css('margin', marginTopBot + 'px 0');
+		
+		if($('#header').attr('data-sized') === 'false'){
+			var headerPadding = parseInt($('#header').css('padding-top').match(/^\d*/)) + marginTopBot + 'px';
+			var headerHeight = parseInt($('#header').css('height').match(/^\d*/)) + marginTopBot + 'px';
+
+			$('#header').css({
+								'padding-top' : headerPadding, 
+								'height' : headerHeight
+							}).attr('data-sized', 'true');				
+		}
+
+		if($('#footer').attr('data-sized') === 'false'){
+			var footerHeight = parseInt($('#footer').css('height').match(/^\d*/)) + marginTopBot + 'px';
+			$('#footer').css({
+				'height' : footerHeight	
+			}).attr('data-sized', 'true');
+		}
+
+		if($('#side-nav').attr('data-sized') === 'false'){
+			var sideNavBot = parseInt($('#side-nav').css('bottom').match(/^\d*/)) + marginTopBot + 'px';
+			$('#side-nav').css({
+				'bottom' : sideNavBot
+			}).attr('data-sized', 'true');
+		}
 	} else {
 		$('.page').height($(window).height());
 	    $('body').height($('.page').height() * 6 - 75);

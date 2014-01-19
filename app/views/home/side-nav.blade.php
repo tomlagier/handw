@@ -1,5 +1,5 @@
 <!-- Begin side navigation -->
-<div id="side-nav" class="navigation">
+<div id="side-nav" class="navigation" data-sized="false">
 	<ul>
 		<li class="nav-item" data-anchor="#home">Home</li>
 		<li class="nav-item" data-anchor="#services">Services</li>
