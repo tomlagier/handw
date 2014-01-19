@@ -9,7 +9,6 @@
 			<div id="portfolio-subnav">
 				<div class="nav-item" data-portfolio-anchor="alcohol">Alcohol</div>
 				<div class="nav-item" data-portfolio-anchor="packaging">Packaging</div>
-				<div class="nav-item" data-portfolio-anchor="branding">Branding</div>
 				<div class="nav-item" data-portfolio-anchor="clients">Clients</div>
 			</div>
 		</div>

@@ -21,7 +21,11 @@ $('.blog-nav-item').on('click', function(){
 	}
 });
 
+var blogFontSize = parseInt($('#main-nav .nav-item').css('font-size').match(/^\d*/));
+
+var blogLineHeight = blogFontSize + 10; 
+
 $('.blog-nav-item').css({
-						'font-size' : $('#main-nav .nav-item').css('font-size'),
-						'line-height' : $('#main-nav .nav-item').css('line-height')
+						'font-size' : blogFontSize + 'px',
+						'line-height' : blogLineHeight + 'px'
 						});

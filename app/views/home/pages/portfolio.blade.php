@@ -7,8 +7,6 @@
     <div class="spacer">|</div>
     <div class="portfolio-nav-item" data-href="packaging">Packaging</div>
     <div class="spacer">|</div>
-    <div class="portfolio-nav-item" data-href="branding">Branding</div>
-    <div class="spacer">|</div>
     <div class="portfolio-nav-item" data-href="clients">Clients</div>
     <div class="stretch"></div>
   </div>
@@ -154,74 +152,6 @@
 </div>
 <!-- End packaging carousel -->
 
-<!-- Begin branding carousel -->
-<div id="branding" class="portfolio-carousel carousel slide" data-ride="carousel">
-
-  <!-- Indicators -->
-  <ol class="carousel-indicators left-content primary">
-    <li data-target="#branding" data-slide-to="0" class="active">
-      <div class="portfolio-thumb-wrapper">
-      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">HMR Foods</div></div>
-      </div>
-    </li>
-    <li data-target="#branding" data-slide-to="1">
-      <div class="portfolio-thumb-wrapper">
-      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Crush</div></div>
-      </div>
-    </li>
-    <li data-target="#branding" data-slide-to="2">
-      <div class="portfolio-thumb-wrapper">
-      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">Fujisan Fresh Sushi</div></div>
-      </div>
-    </li>
-    <li data-target="#branding" data-slide-to="3">
-      <div class="portfolio-thumb-wrapper">
-      <img src="http://placehold.it/100x100" alt="Placeholder" class="portfolio-thumb">
-        <div class="portfolio-thumb-caption"><div class="caption-wrapper">XXX</div></div>
-      </div>
-    </li>
-  </ol>
-
-<!-- Secondary Indicators -->
-   <ol class="carousel-indicators secondary">
-    <li data-target="#branding" data-slide-to="0" class="alternate-active"></li>
-    <li data-target="#branding" data-slide-to="1"></li>
-    <li data-target="#branding" data-slide-to="2"></li>
-    <li data-target="#branding" data-slide-to="3"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner right-content">
-      <div class="slide-wrapper">
-        <div class="item active">
-          <img src="http://placehold.it/900x900" alt="Placeholder">
-        </div>
-            <div class="item">
-        <img src="http://placehold.it/900x900" alt="Placeholder">
-            </div>
-            <div class="item">
-        <img src="http://placehold.it/900x900" alt="Placeholder">
-        </div>
-        <div class="item">
-        <img src="http://placehold.it/900x900" alt="Placeholder">
-        </div>
-      </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#branding" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#branding" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-
-  </div>
-
-</div>
-<!-- End branding carousel -->
 
 <!-- Begin clients info window -->
 <div id="clients" class="portfolio-carousel carousel slide">

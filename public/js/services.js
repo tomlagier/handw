@@ -7,7 +7,12 @@ $('.services-nav-item').on('click', function(){
 	$(this).addClass('active');
 });
 
+var servicesFontSize = parseInt($('#main-nav .nav-item').css('font-size').match(/^\d*/));
+
+var servicesLineHeight = servicesFontSize + 10; 
+
+
 $('#services-nav > ol').css({
-							'font-size' : $('#main-nav .nav-item').css('font-size'),
-							'line-height' : $('#main-nav .nav-item').css('line-height')
+							'font-size' : servicesFontSize + 'px',
+							'line-height' : servicesLineHeight + 'px'
 							});

@@ -68,7 +68,7 @@ body{
     background: black;
     color: white;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 22px;
     margin: 0 auto;
 }
 
@@ -97,7 +97,7 @@ img{
 
 .right-content > *, .left-content > * {
         font-size: 16px;
-        line-height: 20px;
+        line-height: 22px;
 }
 
 *{
@@ -121,12 +121,16 @@ a:hover{
         z-index: 11;
 }
 
-.window-green-line.top{
-        top: 0;
+.window-green-line.top{	
+        top: 5px;
+        left: 0;
+        right: 0;
 }
 
 .window-green-line.bottom{
-        bottom: 0;
+        bottom: 5px;
+        left: 0;
+        right: 0;
 }
 
 /* General Page styles */
@@ -228,7 +232,7 @@ a:hover{
     width: 100%;
     height: 100%;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 18px;
 }
 
 #main-nav .stretch, #portfolio-nav .stretch{
@@ -675,7 +679,7 @@ a:hover{
         bottom: 10px;
         left: 0;
         padding-left: 18px;
-        width: 55%;
+        width: 38%;
 }
 
 @media screen and (max-width: 900px){        
@@ -747,7 +751,7 @@ a:hover{
 
 .services-list{
         list-style: number;
-        padding: 0 0 0 20px;
+        padding: 0 0 0 30px;
 }
 
 .services-item{
@@ -756,9 +760,7 @@ a:hover{
 }
 
 .services-item.active{
-        color: white;
-        font-size: 110%;
-}
+        color: white;}
 
 
 .services-item:last-child{

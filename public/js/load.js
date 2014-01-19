@@ -129,9 +129,12 @@ $.fn.scaleText = function() {
       var fontstep = 2;
       if (this.height()>this.parent().height() || this.width()>this.parent().width()) {
       	var targetFontSize = parseInt(this.css('font-size').match(/^\d*/)) - fontstep;
-      	var targetLineHeight = targetFontSize + 4;
-        this.css('font-size',targetFontSize + 'px').css('line-height', targetLineHeight + 'px');
-        this.scaleText();
+      	var targetLineHeight = targetFontSize + 6;
+
+      	if(targetFontSize > 6){
+      		this.css('font-size',targetFontSize + 'px').css('line-height', targetLineHeight + 'px');
+        	this.scaleText();
+      	}
       }
     }
 
@@ -149,10 +152,13 @@ $.fn.scaleContents = function(){
 	parent.bottom = parent.offset().top + parent.outerHeight();
 
 	var fontstep = 2;
-	if( target.right > parent.right || target.bottom > parent.bottom){
+	if(target.right > parent.right || target.bottom > parent.bottom){
 		var targetFontSize = parseInt(target.css('font-size').match(/^\d*/)) - fontstep;
-		var targetLineHeight = targetFontSize + 4;
-		items.css('font-size',targetFontSize + 'px').css('line-height', targetLineHeight + 'px');
-        this.scaleContents();
+		var targetLineHeight = targetFontSize + 6;
+
+		if (targetFontSize > 6){
+			items.css('font-size',targetFontSize + 'px').css('line-height', targetLineHeight + 'px');
+        	this.scaleContents();
+		}
 	}
 }
