@@ -9,7 +9,7 @@ $('.services-nav-item').on('click', function(){
 
 var servicesFontSize = parseInt($('#main-nav .nav-item').css('font-size').match(/^\d*/));
 
-var servicesLineHeight = servicesFontSize + 10; 
+var servicesLineHeight = servicesFontSize + 5; 
 
 
 $('#services-nav > ol').css({

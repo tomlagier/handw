@@ -125,19 +125,3 @@ $.fn.isNearScreen = function(percent){
 $.fn.isPercentVisible = function(percent){
 
 }
-
-/**
- * Ensure that our header, footer, and side nav are positioned correctly on screens wider than 1600px
- */
-
-$(document).ready(function(){
-    if($(window).width() > 1600){
-
-        //Window width - 1600px / 2 = body margin, + 40 for correct right offset
-        var offset = ($(window).width() - 1600) / 2;
-        var rightOffset = offset + 40;
-        $('#side-nav').css('right', rightOffset + 'px');
-        $('#header, #footer').css('left', offset + 'px');
-        $('#header').css('top')
-    }
-});

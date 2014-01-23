@@ -23,7 +23,7 @@ $('.blog-nav-item').on('click', function(){
 
 var blogFontSize = parseInt($('#main-nav .nav-item').css('font-size').match(/^\d*/));
 
-var blogLineHeight = blogFontSize + 10; 
+var blogLineHeight = blogFontSize + 5; 
 
 $('.blog-nav-item').css({
 						'font-size' : blogFontSize + 'px',

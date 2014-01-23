@@ -14,6 +14,6 @@
 <!-- End scripts -->
 
 <!-- Begin styles -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="css/master.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css?version=<?php echo time(); ?>"/>
+<link rel="stylesheet" type="text/css" href="css/master.css?version=<?php echo time(); ?>"/>
 <!-- End styles -->

@@ -69,8 +69,25 @@ function setHeights(){
 	}
 }
 
+/**
+ * Ensure that our header, footer, and side nav are positioned correctly on screens wider than 1600px
+ */
+
+function widthCheck(){
+	if($(window).width() > 1600){
+
+        //Window width - 1600px / 2 = body margin, + 40 for correct right offset
+        var offset = ($(window).width() - 1600) / 2;
+        var rightOffset = offset + 25;
+        $('#side-nav').css('right', rightOffset + 'px');
+        $('#header, #footer').css('left', offset + 'px');
+        $('#header').css('top')
+    }
+}
+
 $(document).ready(function(){
 	setHeights();
+	widthCheck();
 });
 
 //Set individual page height to window height, then (re)bind waypoints

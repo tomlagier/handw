@@ -45,7 +45,7 @@
   </ol>
 
   <!-- Secondary Indicators -->
-   <ol class="carousel-indicators secondary">
+   <ol class="carousel-indicators secondary fadein-fast">
     <li data-target="#alcohol" data-slide-to="0" class="alternate-active"></li>
     <li data-target="#alcohol" data-slide-to="1"></li>
     <li data-target="#alcohol" data-slide-to="2"></li>
@@ -115,7 +115,7 @@
   </ol>
 
   <!-- Secondary Indicators -->
-   <ol class="carousel-indicators secondary">
+   <ol class="carousel-indicators secondary fadein-fast">
     <li data-target="#packaging" data-slide-to="0" class="alternate-active"></li>
     <li data-target="#packaging" data-slide-to="1"></li>
     <li data-target="#packaging" data-slide-to="2"></li>
@@ -165,7 +165,7 @@
   </div>
 
   <div class="clients-image right-content">
-    <img src="http://placehold.it/900x900">
+    <img src="/img/client-logos.png">
   </div>
 
 </div>

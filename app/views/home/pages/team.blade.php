@@ -17,14 +17,14 @@
 			<div class="location">Los Angeles</div>
 		</div>
 		<div class="lower-content">
-			<div class="quote">“I work in an industry that I have genuine passion for;
+			<div class="quote quote-mark">I work in an industry that I have genuine passion for;
 				design. I specialize in design to print projects, having
 				a wealth of experience that covers brand and corporate
 				identities, packaging design, marketing materials,
 				artwork, pre-press and color management. I've
 				worked in the US and UK with businesses of all sizes,
 				from start-ups to global powerhouses – each offering
-				something exciting and different to be a part of.”</div>
+				something exciting and different to be a part of.</div>
 			<div class="signature">Mike.</div>
 		</div>
 	</div>
@@ -36,12 +36,12 @@
 			<div class="location">Los Angeles</div>
 		</div>
 		<div class="lower-content">
-			<div class="quote">“My passion stems from design and the pursuit of creating
+			<div class="quote quote-mark">My passion stems from design and the pursuit of creating
 				a worthwhile message. With a definitive understanding
 				of the balance between art and business, I aspire to
 				build, drive and grow brands that that are not only
 				progressive and forward thinking, but to also support
-				the people that truly believe in their ideas.”</div>
+				the people that truly believe in their ideas.</div>
 			<div class="signature">Somany.</div>
 		</div>
 	</div>
