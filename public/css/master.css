@@ -1,7 +1,7 @@
 /* Fonts */
 
 @font-face {
-    font-family: 'Gibson';
+    font-family: 'GibsonWeb';
     src: url('/fonts/gibson-bold-webfont.eot');
     src: url('/fonts/gibson-bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('/fonts/gibson-bold-webfont.woff') format('woff'),
@@ -14,7 +14,7 @@
 
 
 @font-face {
-    font-family: 'Gibson';
+    font-family: 'GibsonWeb';
     src: url('/fonts/gibson-italic-webfont.eot');
     src: url('/fonts/gibson-italic-webfont.eot?#iefix') format('embedded-opentype'),
          url('/fonts/gibson-italic-webfont.woff') format('woff'),
@@ -27,13 +27,13 @@
 
 
 @font-face {
-    font-family: 'Gibson';
+    font-family: 'GibsonWeb';
     src: url('/fonts/gibson-light-webfont.eot');
     src: url('/fonts/gibson-light-webfont.eot?#iefix') format('embedded-opentype'),
          url('/fonts/gibson-light-webfont.woff') format('woff'),
          url('/fonts/gibson-light-webfont.ttf') format('truetype'),
          url('/fonts/gibson-light-webfont.svg#Gibson') format('svg');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 
 }
@@ -60,7 +60,8 @@ body{
     -webkit-transition:top .5s;
     -o-transition:top .5s;
     transition:top .5s;
-    font-family: 'Gibson', sans-serif;
+    font-family: 'GibsonWeb', sans-serif;
+    font-weight: 300;
     background: black;
     color: white;
     font-size: 16px;
@@ -79,7 +80,7 @@ img{
         position: relative;
         float: right;
         height: 100%;
-        padding: 180px 65px 65px 32px;
+        padding: 180px 65px 68px 32px;
 }
 
 .left-content{
@@ -88,7 +89,7 @@ img{
         float: left;
         width: 40%;
         height:100%;
-        padding: 180px 28px 65px 65px;
+        padding: 180px 28px 68px 65px;
 }
 
 .right-content > *, .left-content > * {
@@ -98,6 +99,8 @@ img{
 
 *{
         box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
 }
 
 a{
@@ -229,6 +232,9 @@ a:hover{
     height: 100%;
     font-size: 18px;
     line-height: 18px;
+}
+
+#portfolio-nav .nav-wrapper{
     white-space: nowrap;
 }
 
@@ -306,7 +312,7 @@ a:hover{
         display: none;
         position: absolute;
         margin: 0 0 0 -5px;
-        background: black;
+        background: rgba(0,0,0,.8);
         box-shadow: 0 12px 31px 6px rgba(0,0,0,.8);
         border-radius:  0 0 3px 3px;
 }
@@ -388,7 +394,7 @@ a:hover{
         width: 50%;
         height: 50%;
         font-size: 0;
-        padding-right: 32px;
+        padding-right: 35px;
 }
 
 @media screen and (max-width: 900px){
@@ -507,11 +513,17 @@ a:hover{
 
 /*Home page styles */
 
-#home .carousel-indicators, #portfolio .secondary.carousel-indicators{
+#home .carousel-indicators{
         right: 0;
         left: auto;
         text-align: right;
         margin-right: 125px;
+}
+
+#portfolio .secondary.carousel-indicators{
+    text-align: center;
+    margin-right: 125px;
+    bottom: 70px;
 }
 
 #home.carousel-control{

@@ -44,14 +44,6 @@
     </li>
   </ol>
 
-  <!-- Secondary Indicators -->
-   <ol class="carousel-indicators secondary fadein-fast">
-    <li data-target="#alcohol" data-slide-to="0" class="alternate-active"></li>
-    <li data-target="#alcohol" data-slide-to="1"></li>
-    <li data-target="#alcohol" data-slide-to="2"></li>
-    <li data-target="#alcohol" data-slide-to="3"></li>
-  </ol>
-
   <!-- Wrapper for slides -->
   <div class="carousel-inner right-content">
     <div class="slide-wrapper">
@@ -76,6 +68,14 @@
     <a class="right carousel-control" href="#alcohol" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
+
+    <!-- Secondary Indicators -->
+   <ol class="carousel-indicators secondary fadein-fast">
+      <li data-target="#alcohol" data-slide-to="0" class="alternate-active"></li>
+      <li data-target="#alcohol" data-slide-to="1"></li>
+      <li data-target="#alcohol" data-slide-to="2"></li>
+      <li data-target="#alcohol" data-slide-to="3"></li>
+    </ol>
     
   </div>
 
@@ -114,14 +114,6 @@
     </li>
   </ol>
 
-  <!-- Secondary Indicators -->
-   <ol class="carousel-indicators secondary fadein-fast">
-    <li data-target="#packaging" data-slide-to="0" class="alternate-active"></li>
-    <li data-target="#packaging" data-slide-to="1"></li>
-    <li data-target="#packaging" data-slide-to="2"></li>
-    <li data-target="#packaging" data-slide-to="3"></li>
-  </ol>
-
   <!-- Wrapper for slides -->
   <div class="carousel-inner right-content">
      <div class="slide-wrapper">
@@ -147,6 +139,14 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
   
+    <!-- Secondary Indicators -->
+   <ol class="carousel-indicators secondary fadein-fast">
+    <li data-target="#packaging" data-slide-to="0" class="alternate-active"></li>
+    <li data-target="#packaging" data-slide-to="1"></li>
+    <li data-target="#packaging" data-slide-to="2"></li>
+    <li data-target="#packaging" data-slide-to="3"></li>
+  </ol>
+
   </div>
 
 </div>

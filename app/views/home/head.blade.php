@@ -1,4 +1,4 @@
-<title>Hanson and Wen | Design Agency | Los Angeles, CA</title>
+<title>Hanson &amp; Wen | Design Agency | Los Angeles, CA</title>
 
 <!-- Begin meta tags -->
 <meta name="description" content="Marketing description">

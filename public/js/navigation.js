@@ -7,7 +7,7 @@ $(document).ready(function(){
 		
 		//Animate scroll to that position over 1 second
 		$('html,body').animate({
-        	scrollTop: target.offset().top
+        	scrollTop: target.modOffset().top
         }, 1000);
 	});
 
@@ -16,7 +16,7 @@ $(document).ready(function(){
         portfolioPage = $(this).attr('data-portfolio-anchor');
         var targetNav = $('.portfolio-nav-item[data-href=' + portfolioPage + ']');
         $('html, body').animate({
-            scrollTop: target.offset().top
+            scrollTop: target.modOffset().top
         }, function(){
             targetNav.click();
         });
@@ -67,7 +67,7 @@ var snap = _.debounce(function(event){
         if($(element).isNearScreen(0.25) && !window.preventSnap){
 
             $('html,body').stop().animate({
-                scrollTop: $(element).offset().top
+                scrollTop: $(element).modOffset().top
             }, 200);
 
             window.preventSnap = true;
@@ -87,8 +87,8 @@ var snap = _.debounce(function(event){
 window.preventSnap = false;
 window.preventScroll = false;
 
-//Enable snap to page
-$(window).on('scroll.snap', snap);
+//Enable snap to page if page is correct height
+    $(window).on('scroll.snap', snap);
 
 //Modification of http://upshots.org/javascript/jquery-test-if-element-is-in-viewport-visible-on-screen 
 //Returns "true" if more than 70% of an element is onscreen
@@ -102,7 +102,7 @@ $.fn.isNearScreen = function(percent){
 
     viewport.bottom = viewport.top + win.height();
      
-    var bounds = this.offset();
+    var bounds = this.modOffset();
     bounds.bottom = bounds.top + this.outerHeight();
     bounds.top = bounds.top;
 
@@ -110,12 +110,23 @@ $.fn.isNearScreen = function(percent){
     if(!(viewport.bottom < bounds.top || viewport.top > bounds.bottom)){
         
         //Get the percentage of the element that's visible
-        var percentage = (viewport.bottom - bounds.top) / this.height();
+        var percentage = (viewport.bottom - bounds.top) / this.outerHeight();
         return (percentage > (1 - percent) && percentage < (1 + percent));
     }
     return false;
      
 };
+
+//Returns the modified offset for screens > than 800px wide
+$.fn.modOffset = function(){
+    if($(window).height() > 800){
+        var addlOffset = $('.page').css('margin-top').match(/^\d*/)[0];
+        return { top : this.offset().top - addlOffset, left : this.offset().left }
+    } else {
+        return this.offset();
+    }
+}
+
 
 /**
  * Returns "true" if the item is more than percent visible. Elements that

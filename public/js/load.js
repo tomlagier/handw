@@ -19,7 +19,14 @@ function bindWaypoints(){
 		handler: function(){
 			setTimeout(loadPage, 400, $(this).attr('data-contents'));
 		},
-		offset: '90%'
+		offset: 0 + $('.page').css('margin-top').match(/^\d*/)
+	});
+
+	$('.page').waypoint({
+		handler: function(){
+			setTimeout(loadPage, 400, $(this).attr('data-contents'));
+		},
+		offset: 0 - $('.page').css('margin-top').match(/^\d*/)
 	});
 
 	//Bind to the bottom of the page as well
@@ -27,7 +34,7 @@ function bindWaypoints(){
 		handler: function(){
 			setTimeout(loadPage, 400, $(this).attr('data-contents'));
 		},
-		offset: '-90%'
+		offset: $('.page').height() + (2 * $('.page').css('margin-top').match(/^\d*/)) + ($('.page').height() * .1)
 	});
 
 }
@@ -35,7 +42,7 @@ function bindWaypoints(){
 //Need to make sure that when the page is greater than 1600px wide, the height doesn't get all fucked up.
 //Target proportion width:height is 2:1
 function setHeights(){
-	if($(window).width() > 1600 && $(window).height > 800){
+	if($(window).height() > 800){
 		$('.page').height(800);
 		var marginTopBot = parseInt(($(window).height() - 800) / 2);
 		$('.page').css('margin', marginTopBot + 'px 0');
@@ -63,6 +70,8 @@ function setHeights(){
 				'bottom' : sideNavBot
 			}).attr('data-sized', 'true');
 		}
+
+		$('body').height($(window).height() * 6 - 75);
 	} else {
 		$('.page').height($(window).height());
 	    $('body').height($('.page').height() * 6 - 75);

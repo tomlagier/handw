@@ -4,7 +4,7 @@ setTimeout(function(){
     handler: function(){
       setupPortfolioNav();
     },
-    offset: 0,
+    offset: 0 + $('.page').css('margin-top').match(/^\d*/),
     triggerOnce: true
   });
 }, 0);

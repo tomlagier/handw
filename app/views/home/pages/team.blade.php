@@ -17,14 +17,7 @@
 			<div class="location">Los Angeles</div>
 		</div>
 		<div class="lower-content">
-			<div class="quote quote-mark">I work in an industry that I have genuine passion for;
-				design. I specialize in design to print projects, having
-				a wealth of experience that covers brand and corporate
-				identities, packaging design, marketing materials,
-				artwork, pre-press and color management. I've
-				worked in the US and UK with businesses of all sizes,
-				from start-ups to global powerhouses – each offering
-				something exciting and different to be a part of.</div>
+			<div class="quote quote-mark">We started the agency to focus on the things we love doing – combining our passions for design, food, drinks and the things that shape our everyday lives. We’re the people that wake up in the middle of the night with a great idea for a project, or absent-mindedly trace letterforms with our toes in the carpet while watching TV, it’s just part of who we are and it’s why we love doing what we do. We wanted to create an agency that cares, that’s conscious and excitable – so we did.</div>
 			<div class="signature">Mike.</div>
 		</div>
 	</div>
