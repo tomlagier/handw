@@ -40,6 +40,7 @@
 
 	@include('home.privacy-policy')
 	@include('home.terms-overlay')
+	@include('home.sitemap');
 	
 	<!-- End overlays -->
 

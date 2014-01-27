@@ -967,23 +967,39 @@ a:hover{
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(0,0,0,.8);
-    -webkit-transition: opacity .1s ease-in-out;
-    -moz-transition: opacity .1s ease-in-out;
-    -ms-transition: opacity .1s ease-in-out;
-    -o-transition: opacity .1s ease-in-out;
-    transition: opacity .1s ease-in-out;
+    background: rgba(255,255,255,.5);
     z-index: 19;
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -ms-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+}
+
+#overlays.bottom{
+    z-index: -1;
+}
+
+.overlay.bottom{
+    z-index: -1;
 }
 
 #overlays.hidden{
     opacity: 0;
-    z-index: -1;
 }
 
 .overlay.hidden{
     opacity: 0;
-    z-index: -1;
+}
+
+.overlay-wrapper{
+    overflow: scroll;
+    height: 90%;
+    padding-bottom:65px;
+}
+
+body.noscroll{
+    overflow: hidden;
 }
 
 .overlay{
@@ -994,20 +1010,21 @@ a:hover{
     margin-left: -480px;
     top: 10%;
     bottom: 10%;
-    overflow: auto;
     z-index: 20;
     background: black;
     box-shadow: 0 0 15px rgba(0,0,0,.8);
-    -webkit-transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -ms-transition: opacity .2s ease-in-out;
-    -o-transition: opacity .2s ease-in-out;
-    transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -ms-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
 }
 
 .overlay .close{
     cursor: hover;
-    float: right;
+    position: absolute;
+    top: 30px;
+    right: 30px;
     width: 30px;
     height: 30px;
     background: white;

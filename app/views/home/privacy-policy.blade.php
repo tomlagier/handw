@@ -1,6 +1,7 @@
-<div id="privacy" class="overlay hidden">
+<div id="privacy" class="overlay hidden bottom">
 <div class="close"></div>
 <h2>Privacy Policy</h2>
+<div class="overlay-wrapper">
 <p>Hanson & Wen LLC ("Hanson & Wen" or "we") is committed to protecting the privacy of the personally-identifiable information that we collect from you as you use this Web site (the "Site"). The scope of Hanson & Wen's commitment is detailed in this Privacy Policy. By submitting information, you agree to Hanson & Wen's use of such information as described herein.</p>
 ​
 <strong class="upper">INFORMATION COLLECTION & USE</strong>
@@ -20,4 +21,5 @@
  
 ​<strong class="upper">DISCLOSURE</strong>
 <p>We may provide your personally identifiable information and aggregate information to the vendors and service agencies that we may engage to assist us in providing the Site. We will also disclose your personally identifiable information: (a) if we are required to do so by law, regulation or other government authority or otherwise in cooperation with an investigation of a governmental authority, (b) to enforce the Hanson & Wen Terms of Use, or (c) to protect the rights, property or safety of Hanson & Wen, its licensors and/or users of our Site. We will not sell your personally identifiable information to any company or organization.</p>
+</div>
 </div>

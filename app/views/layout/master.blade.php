@@ -15,7 +15,7 @@
                          @yield('footer')
                  </div>
 
-                 <div id="overlays" class="hidden">
+                 <div id="overlays" class="hidden bottom">
                         @yield('overlays')
                  </div>
          </body>

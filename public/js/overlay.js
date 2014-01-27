@@ -3,19 +3,21 @@ $(document).ready(function(){
 	$('.overlay-link').on('click', function(e){
 		e.preventDefault();
 		var targetOverlay = $("#" + $(this).attr("data-overlay"));
-		$('.overlay').addClass('hidden');
-		
-		setTimeout(function(){
-			if(targetOverlay.hasClass('hidden')){
-				targetOverlay.removeClass('hidden');
-				$('#overlays').removeClass('hidden');
-			}
-		}, 220);
-	
+		targetOverlay.removeClass('bottom hidden');
+		$('#overlays').removeClass('bottom hidden');
+		$('body').addClass('noscroll');
 	});
 
-	$('.overlay .close, #overlays').on('click', function(){
+	$('.overlay .close, #overlays').on('click', function(e){
+		if($(e.target).closest('.overlay').length > 0 && !$(e.target).hasClass('close')){
+			console.log('true');
+			return false;
+		}
 		$('.overlay, #overlays').addClass('hidden');
+		$('body').removeClass('noscroll');
+		setTimeout(function(){
+			$('.overlay, #overlays').addClass('bottom');
+		}, 400);
 	});
 
 })

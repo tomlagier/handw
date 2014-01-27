@@ -1,6 +1,7 @@
-<div id="terms" class="overlay hidden">
+<div id="terms" class="overlay hidden bottom">
 <div class="close"></div>
 <h2>Terms of Use</h2>
+<div class="overlay-wrapper">
 <p>Hanson & Wen LLC and its affiliates ("Hanson & Wen" or "we") provides its content on this Web site (the "Site") subject to the following terms and conditions (the "Terms"). We may periodically change the Terms, so please check back from time to time. By accessing and using this Site, you agree to these Terms. For an explanation of Hanson & Wen's practices and policies related to the collection, use, and storage of our users' information, please read our Privacy Policy.</p>
  
 ​<strong class="upper">1. COPYRIGHTS</strong>
@@ -23,4 +24,5 @@
  
 ​<strong class="upper">7. GOVERNING LAW; JURISDICTION</strong>
 <p>These Terms are governed by the laws of the California without reference to the principles of conflicts of laws thereof. Any dispute arising from these Terms shall be resolved exclusively in the state and federal courts of California.</p>
+</div>
 </div>
