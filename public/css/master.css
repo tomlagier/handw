@@ -33,7 +33,7 @@
          url('/fonts/gibson-light-webfont.woff') format('woff'),
          url('/fonts/gibson-light-webfont.ttf') format('truetype'),
          url('/fonts/gibson-light-webfont.svg#Gibson') format('svg');
-    font-weight: 300;
+    font-weight: normal;
     font-style: normal;
 
 }
@@ -61,12 +61,12 @@ body{
     -o-transition:top .5s;
     transition:top .5s;
     font-family: 'GibsonWeb', sans-serif;
-    font-weight: 300;
     background: black;
-    color: white;
     font-size: 16px;
     line-height: 22px;
     margin: 0 auto;
+    color: white;
+    -webkit-font-smoothing: antialiased;
 }
 
 img{
@@ -183,7 +183,7 @@ a:hover{
 }
 
 
-.column-2{
+.column-2-blog{
         -webkit-column-count: 2;
     -webkit-column-gap: 20px;
     -moz-column-count: 2;
@@ -192,10 +192,30 @@ a:hover{
     column-gap:20px;
 }
 
-.column-2 p:first-child, .column-2 ol, .column-2 li:first-child{
+.column-2-blog p:first-child, .column-2-blog ol, .column-2-blog li:first-child{
         margin-top: 0;
 }
 
+
+.services-wrapper{
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.column-2 .services-list{
+    width: 50%;
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+}
+
+.services-list li{
+    padding: 0 30px 0 0;
+}
 
 /* Navigation styles */
 
@@ -937,4 +957,58 @@ a:hover{
     content:'\201D';
     margin-right: 5px;
     position:absolute;
+}
+
+/* Overlay styles */
+
+#overlays{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.8);
+    -webkit-transition: opacity .1s ease-in-out;
+    -moz-transition: opacity .1s ease-in-out;
+    -ms-transition: opacity .1s ease-in-out;
+    -o-transition: opacity .1s ease-in-out;
+    transition: opacity .1s ease-in-out;
+    z-index: 19;
+}
+
+#overlays.hidden{
+    opacity: 0;
+    z-index: -1;
+}
+
+.overlay.hidden{
+    opacity: 0;
+    z-index: -1;
+}
+
+.overlay{
+    position: fixed;
+    padding: 65px;
+    width: 960px;
+    left: 50%;
+    margin-left: -480px;
+    top: 10%;
+    bottom: 10%;
+    overflow: auto;
+    z-index: 20;
+    background: black;
+    box-shadow: 0 0 15px rgba(0,0,0,.8);
+    -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -ms-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+}
+
+.overlay .close{
+    cursor: hover;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: white;
 }

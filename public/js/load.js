@@ -15,14 +15,22 @@ function bindWaypoints(){
 
 	//Sets up lazy loading views. Load occurs when element is 5% of the viewport from the bottom of the window. 
 	//Will fire once, and only if it's the last waypoint during a scroll.
-	$('.page').waypoint({
+	
+	$('.page-load').waypoint({
+		handler: function(){
+			setTimeout(loadPage, 400, $(this).attr('data-contents'));
+		},
+		offset: -1
+	});
+
+	$('.page-load').waypoint({
 		handler: function(){
 			setTimeout(loadPage, 400, $(this).attr('data-contents'));
 		},
 		offset: 0 + $('.page').css('margin-top').match(/^\d*/)
 	});
 
-	$('.page').waypoint({
+	$('.page-load').waypoint({
 		handler: function(){
 			setTimeout(loadPage, 400, $(this).attr('data-contents'));
 		},
@@ -30,7 +38,7 @@ function bindWaypoints(){
 	});
 
 	//Bind to the bottom of the page as well
-	$('.page').waypoint({
+	$('.page-load').waypoint({
 		handler: function(){
 			setTimeout(loadPage, 400, $(this).attr('data-contents'));
 		},
@@ -104,11 +112,74 @@ $(window).on('load resize', function(){
     setHeights();
     $('.page').waypoint('destroy');
     bindWaypoints();
-
-    $('#main-nav .scale-parent').scaleContents();
-    $('#main-nav').height($('#main-nav .nav-item').css('font-size').match(/^\d*/));
+    setGlobalHeaderSize();
     $('.left-nav-block').css('opacity', '1');
 });
+
+$(window).on('load', function(){
+	loadServices();
+});
+
+//Load the Services section, set global font size
+function loadServices(){
+	var pageObj = $('#services');
+	console.log('loading services');
+		
+	//Prevent both events from firing and content from loading multiple times
+	pageObj.attr('data-loaded', 'true');
+		
+	//Load in content, then fade out loader and fade in content
+	pageObj.load('/services', function(response, status){
+
+		//Reset loaded flag if error status occurs
+		if(status === "error"){
+			pageObj.attr('data-loaded', 'false');
+
+		//Otherwise fade in content
+		} else {
+			imagesLoaded( pageObj, function( instance ) {
+				
+				$.each(pageObj.find('.scale-parent'), function(index, element){
+				 	setGlobalFontSize($(element));
+				 });
+
+				$('#services .scale-body').scaleBody();
+
+				pageObj.parent().find('.loader').fadeOut('fast', function(){
+					pageObj.addClass('visible');
+				});
+			});
+		}
+	});
+}
+
+//Sets the global font size from scaling a particular element.
+function setGlobalFontSize(element){
+	element.scaleContents();
+	window.gFontSize = parseInt(element.children().css('font-size').match(/^\d*/));
+}
+
+//Sets the global header font size from scaling the main navigation
+function setGlobalHeaderSize(){
+	$('#main-nav .scale-parent').scaleContents();
+	window.gHeaderSize = parseInt($('#main-nav .nav-item').css('font-size').match(/^\d*/));
+	$('#main-nav').height(window.gHeaderSize);
+}
+
+//Sets the scalable text to the global font size
+$.fn.scaleBody = function(){
+	this.css({
+		'font-size' : window.gFontSize + 'px',
+		'line-height' : window.gFontSize + 4 + 'px'
+	})
+}
+
+//Sets the scalable header to the global header size
+$.fn.scaleHeader = function(){
+	this.css({
+		'font-size' : window.gHeaderSize + 'px'
+	})
+}
 
 //Loads a given page
 function loadPage(page){
@@ -134,11 +205,11 @@ function loadPage(page){
 			//Otherwise fade in content
 			} else {
 				imagesLoaded( pageObj, function( instance ) {
-					$.each(pageObj.find('.scale-text'), function(index, element){
-					 	$(element).scaleText();
+					$.each(pageObj.find('.scale-body'), function(index, element){
+					 	$(element).scaleBody();
 					 });
-					$.each(pageObj.find('.scale-parent'), function(index, element){
-					 	$(element).scaleContents();
+					$.each(pageObj.find('.scale-header'), function(index, element){
+					 	$(element).scaleHeader();
 					 });
 
 					pageObj.parent().find('.loader').fadeOut('fast', function(){
@@ -201,7 +272,7 @@ $.fn.scaleContents = function(){
 	parent.right= parent.offset().left + parent.outerWidth();
 	parent.bottom = parent.offset().top + parent.outerHeight();
 
-	var fontstep = 2;
+	var fontstep = 1;
 	if(target.right > parent.right || target.bottom > parent.bottom){
 		var targetFontSize = parseInt(target.css('font-size').match(/^\d*/)) - fontstep;
 		var targetLineHeight = targetFontSize + 6;

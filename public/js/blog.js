@@ -21,7 +21,7 @@ $('.blog-nav-item').on('click', function(){
 	}
 });
 
-var blogFontSize = parseInt($('#main-nav .nav-item').css('font-size').match(/^\d*/));
+var blogFontSize = window.gHeaderSize;
 
 var blogLineHeight = blogFontSize + 5; 
 

@@ -5,9 +5,15 @@
 	<img src="http://placehold.it/500x500" alt="Our team lower left" class="team-image">
 	<img src="http://placehold.it/500x500" alt="Our team lower right" class="team-image">
 </div>
+<script>
+	$('#team-table-wrapper').css({
+		'font-size' : window.gFontSize + 'px',
+		'line-height' : window.gFontSize + 2 + 'px'
+	});
+</script>
 <div id="team-bios-wrapper" class="right-content">
 	<div class="team-wrapper">
-	<div id="team-table-wrapper" class="scale-parent">
+	<div id="team-table-wrapper">
 	<div id="team-bios-upper">
 	<div class="team-bio">
 		<div class="upper-content">
@@ -17,7 +23,7 @@
 			<div class="location">Los Angeles</div>
 		</div>
 		<div class="lower-content">
-			<div class="quote quote-mark">We started the agency to focus on the things we love doing – combining our passions for design, food, drinks and the things that shape our everyday lives. We’re the people that wake up in the middle of the night with a great idea for a project, or absent-mindedly trace letterforms with our toes in the carpet while watching TV, it’s just part of who we are and it’s why we love doing what we do. We wanted to create an agency that cares, that’s conscious and excitable – so we did.</div>
+			<div class="quote quote-mark">We started the agency to focus on the things we love doing – combining our passions for design, food, drink and the things that shape our everyday lives. We’re the people that wake up in the middle of the night with a great idea for a project, or absent-mindedly trace letterforms with our toes in the carpet while watching TV, it’s just part of who we are. We wanted to create an agency that cares, that’s conscious and excitable – so we did.</div>
 			<div class="signature">Mike.</div>
 		</div>
 	</div>

@@ -33,3 +33,14 @@
 
 	<!-- End footer -->
 @endsection
+
+@section('overlays')
+
+	<!-- Begin overlays -->
+
+	@include('home.privacy-policy')
+	@include('home.terms-overlay')
+	
+	<!-- End overlays -->
+
+@endsection

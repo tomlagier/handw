@@ -7,7 +7,7 @@ $('.services-nav-item').on('click', function(){
 	$(this).addClass('active');
 });
 
-var servicesFontSize = parseInt($('#main-nav .nav-item').css('font-size').match(/^\d*/));
+var servicesFontSize = window.gHeaderSize;
 
 var servicesLineHeight = servicesFontSize + 5; 
 

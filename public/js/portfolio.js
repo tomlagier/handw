@@ -31,13 +31,11 @@ setTimeout(function(){
 
     $('#portfolio-nav').appendTo('.right-nav-block');
 
-    var targetSize = $('#main-nav .nav-item').css('font-size');
-
     $('.portfolio-nav-item, #portfolio-nav .spacer').css({
-        'font-size' : targetSize,
-        'line-height' : targetSize
+        'font-size' : window.gHeaderSize + 'px',
+        'line-height' : window.gHeaderSize + 'px'
       });
-    $('#portfolio-nav').height(targetSize.match(/^\d*/));
+    $('#portfolio-nav').height(window.gHeaderSize);
 
     toggleState();
 

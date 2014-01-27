@@ -14,5 +14,9 @@
                  <div id="footer" data-sized='false'>
                          @yield('footer')
                  </div>
+
+                 <div id="overlays" class="hidden">
+                        @yield('overlays')
+                 </div>
          </body>
  </html> 

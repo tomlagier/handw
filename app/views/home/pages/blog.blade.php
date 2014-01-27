@@ -18,7 +18,7 @@
 	</ul>
 </div>
 
-<div id="blog-posts" class="right-content column-2">
+<div id="blog-posts" class="right-content column-2-blog">
 	<?php $active = true; ?>
 	@foreach($posts as $post)
 		<?php 
@@ -27,7 +27,7 @@
 				$active = false;	
 			}
 		?>
-		<div class="blog-post {{($activePost ? 'active' : '')}} scale-parent" id="{{$post['slug']}}">
+		<div class="blog-post {{($activePost ? 'active' : '')}} scale-body" id="{{$post['slug']}}">
 			{{$post['content']}}
 			<span class="scale-target"></span>
 		</div>

@@ -1,7 +1,7 @@
 <!-- Begin contact page -->
 <div id="contact-content" class="left-content">
 	<div id="stupid-second-content-wrapper">
-		<div id="contact-content-wrapper" class="scale-parent">
+		<div id="contact-content-wrapper" class="scale-body">
 			<div class="contact-block">Our studio is centrally located in Los Angeles, California. We’d love to see you
 			and discuss how we can help take your brand to the next level – just contact us
 			to set up a meeting. <em>Unfortunately, we can't accept walk-in visits.</em></div>

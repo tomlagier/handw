@@ -1,5 +1,5 @@
 <!-- Begin footer content -->
-<span><a href="/">Hanson & Wen LLC</a> | &copy;2014 | <a href="mailto:hello@hansonandwen.com">hello@hansonandwen.com</a> | <a href="/">Privacy</a> | <a href="/">Terms</a> | <a href="/">Site Map</a> | v2</span>
+<span><a href="/">Hanson & Wen LLC</a> | &copy;2014 | <a href="mailto:hello@hansonandwen.com">hello@hansonandwen.com</a> | <a href="/" class="overlay-link" data-overlay="privacy">Privacy</a> | <a href="/" class="overlay-link" data-overlay="terms">Terms</a> | <a href="/">Site Map</a> | v2</span>
 <!-- End footer content -->
 
 <!-- Begin footer scripts -->
@@ -9,6 +9,7 @@
 <script src="js/main.js"></script>
 <script src="js/load.js"></script>
 <script src="js/navigation.js"></script>
+<script src="js/overlay.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

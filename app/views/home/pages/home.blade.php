@@ -1,7 +1,7 @@
 <!-- Begin home page -->
 <!-- Begin text content -->
 <div id="home-text-wrapper" class="left-content">
-<div id="home-text" class="scale-text">
+<div id="home-text" class="scale-body">
 Hello. We're Hanson & Wen, a Los Angeles-based design agency. We focus on packaging and brand management, and we've worked across many industries, having particularly strong relationships within the food, alcohol and consumer goods sectors.
 <br><br>
 We've brought together an exciting, experienced team of energetic professionals to build something special with our clients, so we can work with you to help you achieve your goals. Our aim is to maximize your product's potential. We can create, manage or expand your brand and work closely with you from concept to final print, overseeing each stage with experience and knowledge of the industry, allowing you to focus on your core responsibilities.
