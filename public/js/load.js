@@ -52,7 +52,7 @@ function bindWaypoints(){
 function setHeights(){
 	if($(window).height() > 800){
 		$('.page').height(800);
-		var marginTopBot = parseInt(($(window).height() - 800) / 2);
+		var marginTopBot = parseInt((($(window).height() - 800) / 2) - 5);
 		$('.page').css('margin', marginTopBot + 'px 0');
 		
 		if($('#header').attr('data-sized') === 'false'){
@@ -103,8 +103,10 @@ function widthCheck(){
 }
 
 $(document).ready(function(){
-	setHeights();
-	widthCheck();
+	imagesLoaded( $('body'), function(instance){
+		setHeights();
+		widthCheck();
+	});
 });
 
 //Set individual page height to window height, then (re)bind waypoints
@@ -178,7 +180,40 @@ $.fn.scaleBody = function(){
 $.fn.scaleHeader = function(){
 	this.css({
 		'font-size' : window.gHeaderSize + 'px'
-	})
+	});
+}
+
+//Sets scalable images to proper dimensions by calculating the overflow and adjusting the offset appropriately.
+$.fn.scaleImage = function(){
+
+	var images = this.find('.image');
+
+	var scaleImage = this.find('.image:visible').first();
+	var scaleWrapper = this.find('.scale-image-wrapper:visible').first();
+
+	console.log(scaleImage.width(), scaleWrapper.width());
+
+
+	//If the element is constrained by height
+	if(scaleImage.width() >= scaleWrapper.width()){
+
+		//Half the difference between the element and the wrapper
+		var leftOffset = -((scaleImage.width() - scaleWrapper.width())/2);
+
+		images.css({
+			'left': leftOffset
+		});
+
+	//Else element is constrained by width
+	} else {
+		this.removeClass('height-constrain').addClass('width-constrain'); 
+
+		var topOffset = -((scaleImage.height() - scaleWrapper.height())/2);
+
+		images.css({
+			'top' : topOffset
+		});
+	}
 }
 
 //Loads a given page
@@ -205,16 +240,27 @@ function loadPage(page){
 			//Otherwise fade in content
 			} else {
 				imagesLoaded( pageObj, function( instance ) {
+					
+					//Scale the body text
 					$.each(pageObj.find('.scale-body'), function(index, element){
 					 	$(element).scaleBody();
 					 });
+					
+					//Scale the header text
 					$.each(pageObj.find('.scale-header'), function(index, element){
 					 	$(element).scaleHeader();
 					 });
 
+					//Position the images
+					$.each(pageObj.find('.scale-image'), function(index, element){
+						$(element).scaleImage();
+					});
+
+					//Fade out the loading gif
 					pageObj.parent().find('.loader').fadeOut('fast', function(){
 						pageObj.addClass('visible');
 					});
+
 				});
 			}
 		});
@@ -234,9 +280,8 @@ $.fn.isOnScreen = function(){
     viewport.right = viewport.left + win.width();
     viewport.bottom = viewport.top + win.height();
      
-    var bounds = this.offset();
+    var bounds = this.modOffset();
     bounds.right = bounds.left + this.outerWidth() - 1;
-    bounds.bottom = bounds.top + this.outerHeight() - 1;
      
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
      

@@ -3,6 +3,8 @@
 <!-- End footer content -->
 
 <!-- Begin footer scripts -->
+<script src="js/jquery-1.10.js"></script>
+<script src="js/underscore.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/waypoints.js"></script>
 <script src="js/scrollIntoView.js"></script>

@@ -35,15 +35,17 @@ var portfolioPage = '';
 $(document).ready(function(){
     $(window).on('scroll load resize', function(){
         setTimeout(function(context){
+            var mostVisible = 0, target = false;
+            $('.navigation .active').removeClass('active');
             $.each($('.page-contents'), function(index, element){
-                var target = $(element).attr('id');
-                if($(element).isNearScreen(0.51)){
-                    $('.navigation [data-anchor=#' + target + ']').addClass('active');
-                }
-                else{
-                    $('.navigation [data-anchor=#' + target + ']').removeClass('active');
+                if($(element).percentVisible() > mostVisible){
+                    mostVisible = $(element).percentVisible();
+                    target = $(element).attr('id');
                 }
             });
+            if(target){
+                $('.navigation [data-anchor=#' + target + ']').addClass('active');
+            }
         });
     });
 });
@@ -64,7 +66,7 @@ var snap = _.debounce(function(event){
     $.each($('.page-contents'), function(index, element){
         
         //If the page view is 70% of the screen and we are allowed to snap, snap into view
-        if($(element).isNearScreen(0.25) && !window.preventSnap){
+        if($(element).isPercentVisible(0.25) && !window.preventSnap){
 
             $('html,body').stop().animate({
                 scrollTop: $(element).modOffset().top
@@ -92,47 +94,62 @@ window.preventScroll = false;
 
 //Modification of http://upshots.org/javascript/jquery-test-if-element-is-in-viewport-visible-on-screen 
 //Returns "true" if more than 70% of an element is onscreen
-$.fn.isNearScreen = function(percent){
+$.fn.percentVisible = function(){
+    if (this.isOnScreen()){
+        var win = $(window);
      
-    var win = $(window);
-     
-    var viewport = {
-        top : win.scrollTop()
-    };
+        var viewport = {
+            top : win.scrollTop()
+        };
 
-    viewport.bottom = viewport.top + win.height();
-     
-    var bounds = this.modOffset();
-    bounds.bottom = bounds.top + this.outerHeight();
-    bounds.top = bounds.top;
+        viewport.bottom = viewport.top + win.height();
+         
+        var bounds = this.modOffset();
 
-    //If the element is visible
-    if(!(viewport.bottom < bounds.top || viewport.top > bounds.bottom)){
-        
+        //Element is fully contained by viewport - return 1 for "100% visible"
+        if(bounds.top >= viewport.top && bounds.bottom <= viewport.bottom){
+            var percentVisible = 1;
+        }
+        //Bottom of element is below viewport
+        else if(bounds.bottom >= viewport.bottom){
+            //Top of the window is within viewport
+            if (bounds.top >= viewport.top){
+                var percentVisible = Math.abs((bounds.top - viewport.bottom) / win.height());
+            //Top of the window is outside of viewport : object fills viewport
+            } else {
+                var percentVisible = 1;
+            }
+        //Top of element is above viewport
+        } else if (bounds.top <= viewport.top){
+            //Bottom of element is within viewport
+            if (bounds.bottom <= viewport.bottom){
+                var percentVisible = Math.abs((viewport.top - bounds.bottom) / win.height());
+            //Bottom of the window is outside of viewport : object fills viewport
+            } else {
+                var percentVisible = 1;
+            }
+        }
         //Get the percentage of the element that's visible
-        var percentage = (viewport.bottom - bounds.top) / this.outerHeight();
-        return (percentage > (1 - percent) && percentage < (1 + percent));
+        return percentVisible;        
     }
     return false;
-     
 };
+
+//Returns whether an element consumes over a specified percentage of the viewport
+
+$.fn.isPercentVisible = function(percent){
+    return (this.percentVisible() >= percent);
+}
 
 //Returns the modified offset for screens > than 800px wide
 $.fn.modOffset = function(){
     if($(window).height() > 800){
-        var addlOffset = $('.page').css('margin-top').match(/^\d*/)[0];
-        return { top : this.offset().top - addlOffset, left : this.offset().left }
+        var addlOffset = parseInt($('.page').css('margin-top').match(/^\d*/)[0]);
+        return { top : this.offset().top - addlOffset, left : this.offset().left, bottom: this.offset().top + this.outerHeight() + addlOffset, right: this.offset().left + this.outerWidth() }
     } else {
-        return this.offset();
+        var bounds = this.offset();
+        bounds.bottom = bounds.top + this.outerHeight();
+        bounds.right = bounds.left + this.outerWidth();
+        return bounds;
     }
-}
-
-
-/**
- * Returns "true" if the item is more than percent visible. Elements that
- * @param  {[type]}  percent [description]
- * @return {Boolean}         [description]
- */
-$.fn.isPercentVisible = function(percent){
-
 }

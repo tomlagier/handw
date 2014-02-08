@@ -23,9 +23,7 @@
 		<ol start="4" class="services-list scale-parent">
 			<li id="art-direction" class="services-item">We can be available to direct each photo shoot, so every shot is perfectly suited to your brand and the identity we've created. We have strong relationships with specialist photographers, food stylists and industry leaders, enabling us to build a cohesive identity that can be used across all of your projects.</li>
 			<li id="production-artwork" class="services-item">We have a technical background, and can take our design work into production, ultimately releasing to the printer. We'll ensure consistency and printability across a host of substrates and formats, adding all of your relevant pack copy, while conforming to regulatory standards. We have a quality control team who ensure the highest level of accuracy in everything we do.</li>
-			<li id="project-management" class="services-item"> Our dedicated team will oversee your project, taking ownership at each stage and allowing you to focus on your daily business tasks.
-			<br><br>
-			We are industry-proven, experienced and knowledgeable – priding ourselves on seeing each project through from our first consultation to your on-shelf success.</li>
+			<li id="project-management" class="services-item"> Our dedicated team will oversee your project, taking ownership at each stage and allowing you to focus on your daily business tasks.	We are industry-proven, experienced and knowledgeable – priding ourselves on seeing each project through from our first consultation to your on-shelf success.</li>
 			<li id="press-checks" class="services-item">We have extensive technical and on-press experience, having traveled globally to work directly with printers. We can be onsite to safeguard a great final product for you and your customers, while maintaining your brand standards at the final stage of production.<span class="scale-target">.</span></li>
 		</ol>
 	</div>

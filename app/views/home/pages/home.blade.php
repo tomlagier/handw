@@ -14,26 +14,27 @@ We've brought together an exciting, experienced team of energetic professionals 
   <ol class="carousel-indicators">
     <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#home-carousel" data-slide-to="1"></li>
-    <li data-target="#home-carousel" data-slide-to="2"></li>
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner">
+  <div class="carousel-inner scale-image height-constrain">
+
     <div class="item active">
-      <img src="http://placehold.it/900x900" alt="Placeholder">
+      <div class="scale-image-wrapper">
+        <img src="/img/home/home-1.jpg" class="image" alt="Placeholder">
+      </div>
       <div class="carousel-caption">
       </div>
     </div>
+
     <div class="item">
-      <img src="http://placehold.it/900x900" alt="Placeholder">
+      <div class="scale-image-wrapper">
+        <img src="/img/home/home-2.jpg" class="image" alt="Placeholder">
+      </div>
       <div class="carousel-caption">
       </div>
     </div>
-    <div class="item">
-      <img src="http://placehold.it/900x900" alt="Placeholder">
-      <div class="carousel-caption">
-      </div>
-    </div>
+
   </div>
 
   <!-- Controls -->

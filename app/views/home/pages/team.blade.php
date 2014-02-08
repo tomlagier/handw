@@ -1,9 +1,8 @@
 <!-- Begin team page -->
-<div id="team-image-wrapper" class="left-content">
-	<img src="http://placehold.it/500x500" alt="Our team upper left" class="team-image">
-	<img src="http://placehold.it/500x500" alt="Our team upper right" class="team-image">
-	<img src="http://placehold.it/500x500" alt="Our team lower left" class="team-image">
-	<img src="http://placehold.it/500x500" alt="Our team lower right" class="team-image">
+<div id="team-image-wrapper" class="left-content scale-image height-constrain">
+	<div class="scale-image-wrapper">
+		<img src="/img/team/team-1.jpg" alt="" class="image">
+	</div>
 </div>
 <script>
 	$('#team-table-wrapper').css({

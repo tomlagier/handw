@@ -13,12 +13,12 @@ setTimeout(function(){
     setTimeout(function(){
       var state = $('#portfolio-nav').attr('data-active'); 
       if (state === "true"){
-        if(!$('#portfolio').isNearScreen(0.35)){
+        if(!$('#portfolio').isPercentVisible(0.35)){
           $('#portfolio-nav').css('opacity', '0');
           $('#portfolio-nav').attr('data-active', '');
         }
       } else {
-        if($('#portfolio').isNearScreen(0.35) && $('#portfolio').isOnScreen()){
+        if($('#portfolio').isPercentVisible(0.35) && $('#portfolio').isOnScreen()){
           $('#portfolio-nav').css('opacity', '1');
           $('#portfolio-nav').attr('data-active', 'true');
 
