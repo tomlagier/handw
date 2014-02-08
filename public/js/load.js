@@ -191,9 +191,6 @@ $.fn.scaleImage = function(){
 	var scaleImage = this.find('.image:visible').first();
 	var scaleWrapper = this.find('.scale-image-wrapper:visible').first();
 
-	console.log(scaleImage.width(), scaleWrapper.width());
-
-
 	//If the element is constrained by height
 	if(scaleImage.width() >= scaleWrapper.width()){
 
@@ -215,6 +212,12 @@ $.fn.scaleImage = function(){
 		});
 	}
 }
+
+$(window).on('resize', function(){
+	$.each($('.scale-image'), function(index, element){
+		$(element).scaleImage();
+	});
+});
 
 //Loads a given page
 function loadPage(page){

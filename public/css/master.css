@@ -342,13 +342,14 @@ a:hover{
 
 #side-nav{
         position: fixed;
-        bottom: 40px;
+        bottom: 50px;
         right: 26px;
         z-index: 16;
 }
 
 #side-nav ul{
         font-size: 0;
+        list-style: none;
 }
 
 #side-nav .nav-item{
@@ -602,6 +603,7 @@ a:hover{
 #home .carousel-inner{
         position: absolute;
         top: 0;
+        right: 0;
 }
 
 /* Portfolio page styles */
