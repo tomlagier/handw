@@ -15,6 +15,7 @@ function bindWaypoints(){
 
 	//Sets up lazy loading views. Load occurs when element is 5% of the viewport from the bottom of the window. 
 	//Will fire once, and only if it's the last waypoint during a scroll.
+	var waypointOffset = parseInt($('.page').css('margin-top').match(/^\d*/));
 	
 	$('.page-load').waypoint({
 		handler: function(){
@@ -27,14 +28,14 @@ function bindWaypoints(){
 		handler: function(){
 			setTimeout(loadPage, 400, $(this).attr('data-contents'));
 		},
-		offset: 0 + $('.page').css('margin-top').match(/^\d*/)
+		offset: 0 + waypointOffset
 	});
 
 	$('.page-load').waypoint({
 		handler: function(){
 			setTimeout(loadPage, 400, $(this).attr('data-contents'));
 		},
-		offset: 0 - $('.page').css('margin-top').match(/^\d*/)
+		offset: 0 - waypointOffset
 	});
 
 	//Bind to the bottom of the page as well
@@ -42,7 +43,7 @@ function bindWaypoints(){
 		handler: function(){
 			setTimeout(loadPage, 400, $(this).attr('data-contents'));
 		},
-		offset: $('.page').height() + (2 * $('.page').css('margin-top').match(/^\d*/)) + ($('.page').height() * .1)
+		offset: $('.page').height() + (2 * waypointOffset) + ($('.page').height() * .1)
 	});
 
 }
@@ -52,13 +53,12 @@ function bindWaypoints(){
 function setHeights(){
 	if($(window).height() > 800){
 		$('.page').height(800);
-		var marginTopBot = parseInt((($(window).height() - 800) / 2) - 5);
+		var marginTopBot = parseInt((($(window).height() - 800) / 2));
 		$('.page').css('margin', marginTopBot + 'px 0');
 		
 		if($('#header').attr('data-sized') === 'false'){
 			var headerPadding = parseInt($('#header').css('padding-top').match(/^\d*/)) + marginTopBot + 'px';
 			var headerHeight = parseInt($('#header').css('height').match(/^\d*/)) + marginTopBot + 'px';
-
 			$('#header').css({
 								'padding-top' : headerPadding, 
 								'height' : headerHeight
@@ -125,7 +125,6 @@ $(window).on('load', function(){
 //Load the Services section, set global font size
 function loadServices(){
 	var pageObj = $('#services');
-	console.log('loading services');
 		
 	//Prevent both events from firing and content from loading multiple times
 	pageObj.attr('data-loaded', 'true');
@@ -228,7 +227,6 @@ function loadPage(page){
 	//If content is not loaded and the content is still visible
 	if(pageObj.attr('data-loaded') === 'false' && pageObj.parent().isOnScreen()){
 
-		console.log('loading ' + page);
 		
 		//Prevent both events from firing and content from loading multiple times
 		pageObj.attr('data-loaded', 'true');

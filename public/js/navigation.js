@@ -1,6 +1,6 @@
 //Enable smooth scrolling
 $(document).ready(function(){
-	$('#main-nav > div > .nav-item, #side-nav > ul > .nav-item').on('click touchstart', function(){
+	$('#main-nav > div > .nav-item, #side-nav > ul > .nav-item').on('click', function(){
 
 		//Get scroll target
 		var target = $($(this).attr('data-anchor'));
@@ -11,25 +11,27 @@ $(document).ready(function(){
         }, 1000);
 	});
 
-    $('#portfolio-subnav .nav-item').on('click touchstart', function(){
-        var target=$('#portfolio');
-        portfolioPage = $(this).attr('data-portfolio-anchor');
-        var targetNav = $('.portfolio-nav-item[data-href=' + portfolioPage + ']');
-        $('html, body').animate({
-            scrollTop: target.modOffset().top
-        }, function(){
-            targetNav.click();
-        });
-    });
+    //Not relevant without portfolio section 
+    
+    // $('#portfolio-subnav .nav-item').on('click touchstart', function(){
+    //     var target=$('#portfolio');
+    //     portfolioPage = $(this).attr('data-portfolio-anchor');
+    //     var targetNav = $('.portfolio-nav-item[data-href=' + portfolioPage + ']');
+    //     $('html, body').animate({
+    //         scrollTop: target.modOffset().top
+    //     }, function(){
+    //         targetNav.click();
+    //     });
+    // });
 
-    $('#main-nav .nav-item[data-anchor=#portfolio]').hover(function(){
-        $('#portfolio-subnav').stop().fadeIn();
-    }, function(){
-        $('#portfolio-subnav').stop().fadeOut();
-    });
+    // $('#main-nav .nav-item[data-anchor=#portfolio]').hover(function(){
+    //     $('#portfolio-subnav').stop().fadeIn();
+    // }, function(){
+    //     $('#portfolio-subnav').stop().fadeOut();
+    // });
 });
 
-var portfolioPage = '';
+//var portfolioPage = '';
 
 //Enable scroll spying
 $(document).ready(function(){
@@ -66,7 +68,8 @@ var snap = _.debounce(function(event){
     $.each($('.page-contents'), function(index, element){
         
         //If the page view is 70% of the screen and we are allowed to snap, snap into view
-        if($(element).isPercentVisible(0.25) && !window.preventSnap){
+        if($(element).isPercentVisible(0.7) && !window.preventSnap){
+
 
             $('html,body').stop().animate({
                 scrollTop: $(element).modOffset().top
@@ -82,6 +85,7 @@ var snap = _.debounce(function(event){
              setTimeout(function(){
                  window.preventSnap = false;
              }, 650);
+
         }
     });  
 }, 600);
@@ -90,7 +94,7 @@ window.preventSnap = false;
 window.preventScroll = false;
 
 //Enable snap to page if page is correct height
-    $(window).on('scroll.snap', snap);
+$(window).on('scroll', snap);
 
 //Modification of http://upshots.org/javascript/jquery-test-if-element-is-in-viewport-visible-on-screen 
 //Returns "true" if more than 70% of an element is onscreen
@@ -144,12 +148,13 @@ $.fn.isPercentVisible = function(percent){
 //Returns the modified offset for screens > than 800px wide
 $.fn.modOffset = function(){
     if($(window).height() > 800){
-        var addlOffset = parseInt($('.page').css('margin-top').match(/^\d*/)[0]);
+        var addlOffset = parseInt($('.page').css('margin-top').match(/^\-?(\d|.)*/)[0]);
         return { top : this.offset().top - addlOffset, left : this.offset().left, bottom: this.offset().top + this.outerHeight() + addlOffset, right: this.offset().left + this.outerWidth() }
     } else {
         var bounds = this.offset();
         bounds.bottom = bounds.top + this.outerHeight();
         bounds.right = bounds.left + this.outerWidth();
+
         return bounds;
     }
 }

@@ -2,9 +2,11 @@
 <div id="contact-content" class="left-content">
 	<div id="stupid-second-content-wrapper">
 		<div id="contact-content-wrapper" class="scale-body">
-			<div class="contact-block">Our studio is centrally located in Los Angeles, California. We’d love to see you
-			and discuss how we can help take your brand to the next level – just contact us
-			to set up a meeting. <em>Unfortunately, we can't accept walk-in visits.</em></div>
+			
+			<div class="contact-block">Our studio is centrally located in downtown Los Angeles, based in the iconic Spring Arts Tower. Initially opened in 1915 as the home for Citizens National Bank, the Spring Arts Tower now houses a bustling, world class business and arts community, making use of the building’s classic styling and fantastic location.</div>
+
+			<div class="contact-block"><em>We’d love to see you and discuss how we can help take your brand to the next level – just contact us to set up a meeting.</em></div>
+			
 			<div class="contact-block">
 				<div class="telephone-label">Telephone:</div>
 				<div class="telephone-number">323 800 2623</div>
@@ -15,7 +17,7 @@
 			</div>
 			<div class="contact-block">
 				<div class="address-label">Address:</div>
-				<div class="address">7083 Hollywood Blvd, Los Angeles, CA 90028</div>
+				<div class="address">Suite 1102, 453 South Spring Street, Los Angeles, CA 90013</div>
 			</div>
 			<div class="contact-block">
 				<div class="twitter-label">Twitter:</div>
@@ -37,6 +39,6 @@
 	</div>
 </div>
 <div id="contact-map" class="right-content">
-	<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=7083+Hollywood+Blvd,+Los+Angeles,+CA+90028&amp;ie=UTF8&amp;hq=&amp;hnear=7083+Hollywood+Blvd,+Los+Angeles,+California+90028&amp;gl=us&amp;t=m&amp;z=14&amp;ll=34.102037,-118.344379&amp;output=embed&amp;iwloc=near"></iframe><br /><small>
+	<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=453+South+Spring+Street,+Los+Angeles,+CA+90013&amp;ie=UTF8&amp;hq=&amp;hnear=453+South+Spring+Street,+Los+Angeles,+CA+90013&amp;gl=us&amp;t=m&amp;z=14&amp;ll=34.04806,-118.24890&amp;output=embed&amp;iwloc=near"></iframe>
 </div>
 <!-- End contact page -->

@@ -5,13 +5,7 @@
 		<div class="spacer">|</div>
 		<div class="nav-item" data-anchor="#services">Services</div>
 		<div class="spacer">|</div>
-		<div class="nav-item" data-anchor="#portfolio">Portfolio
-			<div id="portfolio-subnav">
-				<div class="nav-item" data-portfolio-anchor="alcohol">Alcohol</div>
-				<div class="nav-item" data-portfolio-anchor="packaging">Packaging</div>
-				<div class="nav-item" data-portfolio-anchor="clients">Clients</div>
-			</div>
-		</div>
+		<div class="nav-item" data-anchor="#clients">Clients</div>
 		<div class="spacer">|</div>
 		<div class="nav-item" data-anchor="#team">Team</div>
 		<div class="spacer">|</div>

@@ -1,7 +1,7 @@
 <!-- Begin team page -->
 <div id="team-image-wrapper" class="left-content scale-image height-constrain">
 	<div class="scale-image-wrapper">
-		<img src="/img/team/team-1.jpg" alt="" class="image">
+		<img src="/img/team/team-1.jpg?version=2" alt="" class="image">
 	</div>
 </div>
 <script>
@@ -16,7 +16,7 @@
 	<div id="team-bios-upper">
 	<div class="team-bio">
 		<div class="upper-content">
-			<img src="http://placehold.it/100x100" alt="" class="team-thumb">
+			<img src="/img/team/mike.jpg" alt="" class="team-thumb">
 			<div class="name">Mike Ball</div>
 			<div class="title">Creative Director</div>
 			<div class="location">Los Angeles</div>
@@ -28,7 +28,7 @@
 	</div>
 	<div class="team-bio">
 		<div class="upper-content">
-			<img src="http://placehold.it/100x100" alt="" class="team-thumb">
+			<img src="/img/team/somany.jpg" alt="" class="team-thumb">
 			<div class="name">Somany Koeung</div>
 			<div class="title">Accounts Director</div>
 			<div class="location">Los Angeles</div>
@@ -49,7 +49,7 @@
 	<div id="team-bios-lower">
 	<div class="team-bio">
 		<div class="upper-content">
-			<img src="http://placehold.it/100x100" alt="" class="team-thumb">
+			<img src="/img/team/scott.jpg" alt="" class="team-thumb">
 			<div class="name">Scott Macdonald</div>
 			<div class="title">New Business Development</div>
 			<div class="location">New York</div>
@@ -65,7 +65,7 @@
 	</div>
 	<div class="team-bio">
 		<div class="upper-content">
-			<img src="http://placehold.it/100x100" alt="" class="team-thumb">
+			<img src="/img/team/team.jpg" alt="" class="team-thumb">
 			<div class="name">Team</div>
 		</div>
 		<div class="lower-content">

@@ -18,7 +18,7 @@
 	<!-- Begin content -->
 	@include('home.page', array('page' => 'home'))
 	@include('home.page', array('page' => 'services'))
-	@include('home.page', array('page' => 'portfolio'))
+	@include('home.page', array('page' => 'clients'))
 	@include('home.page', array('page' => 'team'))
 	@include('home.page', array('page' => 'blog'))
 	@include('home.page', array('page' => 'contact'))

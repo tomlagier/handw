@@ -541,6 +541,18 @@ a:hover{
 
 /* Carousel styles */
 
+/* Enable fade transition */
+
+.carousel .active.left, .carousel .active.right {
+    left:0;
+    z-index:2;
+}
+
+.carousel .next {
+    left:0;
+    z-index:1;
+}
+
 .carousel-inner{
         height: 100%;
 }
@@ -573,6 +585,16 @@ a:hover{
 }
 
 /*Home page styles */
+
+#home .green-line{
+    z-index: 17;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 65px;
+    width: 100%;
+    background: #669933;
+}
 
 #home .carousel-indicators{
         right: 0;
@@ -1072,3 +1094,4 @@ body.noscroll{
 .overlay .close:hover{
     opacity: 1;
 }
+
