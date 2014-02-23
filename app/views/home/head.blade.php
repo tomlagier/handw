@@ -1,7 +1,7 @@
 <title>Hanson &amp; Wen | Design Agency | Los Angeles, CA</title>
 
 <!-- Begin meta tags -->
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="favicon.ico?version=2">
 <meta name="keywords" content="LA, agency, angeles, art, artwork, brand, branding, brands, california, check, consultation, design, designers, direction, graphic">
 <meta name="author" content="Hanson and Wen">
 <meta name="fb_admins_meta_tag" content="HansonandWen">
