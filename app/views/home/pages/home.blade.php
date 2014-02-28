@@ -17,6 +17,8 @@ We've brought together an exciting, experienced team of energetic professionals 
     <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#home-carousel" data-slide-to="1"></li>
     <li data-target="#home-carousel" data-slide-to="2"></li>
+    <li data-target="#home-carousel" data-slide-to="3"></li>
+    <li data-target="#home-carousel" data-slide-to="4"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -24,7 +26,7 @@ We've brought together an exciting, experienced team of energetic professionals 
 
     <div class="item active">
       <div class="scale-image-wrapper">
-        <img src="/img/home/home-2.jpg?version=2" class="image" alt="Placeholder">
+        <img src="/img/home/home-1.jpg?version=3" class="image" alt="Placeholder">
       </div>
       <div class="carousel-caption">
       </div>
@@ -32,7 +34,7 @@ We've brought together an exciting, experienced team of energetic professionals 
 
     <div class="item not-active">
       <div class="scale-image-wrapper">
-        <img src="/img/home/home-3.jpg" class="image" alt="Placeholder">
+        <img src="/img/home/home-2.jpg?version=3" class="image" alt="Placeholder">
       </div>
       <div class="carousel-caption">
       </div>
@@ -40,7 +42,23 @@ We've brought together an exciting, experienced team of energetic professionals 
 
     <div class="item not-active">
       <div class="scale-image-wrapper">
-        <img src="/img/home/home-1.jpg" class="image" alt="Placeholder">
+        <img src="/img/home/home-3.jpg?version=2" class="image" alt="Placeholder">
+      </div>
+      <div class="carousel-caption">
+      </div>
+    </div>
+
+    <div class="item not-active">
+      <div class="scale-image-wrapper">
+        <img src="/img/home/home-4.jpg" class="image" alt="Placeholder">
+      </div>
+      <div class="carousel-caption">
+      </div>
+    </div>
+
+    <div class="item not-active">
+      <div class="scale-image-wrapper">
+        <img src="/img/home/home-5.jpg" class="image" alt="Placeholder">
       </div>
       <div class="carousel-caption">
       </div>
