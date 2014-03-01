@@ -32,15 +32,15 @@ We've brought together an exciting, experienced team of energetic professionals 
       </div>
     </div>
 
-    <div class="item not-active">
+    <div class="item">
       <div class="scale-image-wrapper">
-        <img src="/img/home/home-2.jpg?version=3" class="image" alt="Placeholder">
+        <img src="/img/home/home-2.jpg?version=4" class="image" alt="Placeholder">
       </div>
       <div class="carousel-caption">
       </div>
     </div>
 
-    <div class="item not-active">
+    <div class="item">
       <div class="scale-image-wrapper">
         <img src="/img/home/home-3.jpg?version=2" class="image" alt="Placeholder">
       </div>
@@ -48,15 +48,15 @@ We've brought together an exciting, experienced team of energetic professionals 
       </div>
     </div>
 
-    <div class="item not-active">
+    <div class="item">
       <div class="scale-image-wrapper">
-        <img src="/img/home/home-4.jpg" class="image" alt="Placeholder">
+        <img src="/img/home/home-4.jpg?version=2" class="image" alt="Placeholder">
       </div>
       <div class="carousel-caption">
       </div>
     </div>
 
-    <div class="item not-active">
+    <div class="item">
       <div class="scale-image-wrapper">
         <img src="/img/home/home-5.jpg" class="image" alt="Placeholder">
       </div>
